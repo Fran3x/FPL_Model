@@ -94,7 +94,6 @@ names = {
     'José Sá': 'José Malheiro de Sá',
     'Aleksandar Mitrovic': 'Aleksandar Mitrović',
     'Erling Haaland': 'Erling Håland',
-    'Kalidou Koulibaly': '',
     'Jefferson Lerma': 'Jefferson Lerma Solís',
     'Taiwo Awoniyi': '',
     'Darwin Núñez': 'Darwin Núñez',

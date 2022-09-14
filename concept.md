@@ -26,6 +26,41 @@ Lineup evaluation model:
   4. expected minutes of players
 
 
+Features:
+- Related to goal appetite:
+    - 'goals_avg5'
+    - 'xG_avg5'
+    - 'shots_avg5'
+
+- Related to creativity:
+    - 'assists_fpl_avg5'
+    
+- Related to defensive capabilities:
+    - 'clean_sheets_avg5'
+    - 'goals_conceded_avg5'
+
+- Related to general performance:
+    - 'bonus_avg5', 
+    - 'bps_avg5', 
+
+- Related to team offensive form:
+    - 'xGBuildup_avg5'
+    - 'xGChain_avg5'
+    
+- Related to cards:
+    - 'yellow_cards_avg5',
+    - red_cards_avg5'
+    
+- Other:
+    - 'was_home'
+
+
+Feature ideas:
+- team elo rating (percentage difference)
+
+
+
+
 Player evaluation model:
 - expected points,
 - ownership,
