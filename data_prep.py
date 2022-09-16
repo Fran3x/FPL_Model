@@ -6,6 +6,8 @@ from understat import *
 from mergers import *
 from cleaners import *
 from commons import *
+from statistics import *
+import numpy as np
 
 import match_names as mn
 
@@ -102,12 +104,8 @@ def add_missing_a_h_team(df):
 def get_fpl_data():
     fpl_data = pd.read_csv('fpl_players.csv')
     fpl_data = transform_season_column(fpl_data)
-#     print('KK', fpl_data[fpl_data['name'] == 'Kalidou Koulibaly'])
 
-#     # add h_team, a_team columns to fpl_player
-#     print('LEN WAS HOME', len(fpl_data[fpl_data['was_home'] == True]))
-#     print('LEN WAS NOT HOME', len(fpl_data[fpl_data['was_home'] == False]))
-    
+    # add h_team, a_team columns to fpl_player
     fpl_data = add_opp_team_for_current_season(fpl_data)
     fpl_data = add_away_team_column(fpl_data)
     fpl_data = add_home_team_column(fpl_data)
@@ -235,6 +233,14 @@ def clean_nans(df):
     return df
 
 
+def add_opp_team(df):
+    for i, row in df.iterrows():
+        if row['was_home'] == 1:
+            df.loc[i, 'opp_team'] = row['a_team']
+        else:
+            df.loc[i, 'opp_team'] = row['h_team']
+    return df
+
     
 def load_previous_games(rolling_columns):
     epl_players = get_epl_players()
@@ -246,6 +252,16 @@ def load_previous_games(rolling_columns):
     excluded_columns = ['h_team_und', 'a_team_und', 'h_team_fpl', 'a_team_fpl', 'roster_id']
     dataset = exclude_columns(dataset, excluded_columns)
     dataset['was_home'] = dataset['was_home'].astype(int)
+    
+    
+    dataset = dataset.dropna(subset = ['team'])
+    
+    dataset = add_opp_team(dataset)
+    
+    # team ratings
+    dataset = add_team_rating(dataset)
+    dataset = add_opposite_team_rating(dataset)
+    dataset = add_team_rating_diff(dataset)
     
     # dataset = clean_nans(dataset)
     
@@ -275,11 +291,11 @@ def get_fixtures_for_next_gw_by_id(fixtures, gameweek, team_id):
     return result
 
 
-
 def get_team_for_current_season():
     teams = pd.read_csv('data/2022-23/teams.csv')
     
     return teams
+
 
 def get_team_by_id(team_id):
     teams = pd.read_csv('data/2022-23/teams.csv')
@@ -289,12 +305,92 @@ def get_team_by_id(team_id):
     return team['name']
 
 
+def get_team_name_for_rating(team_name):
+    if team_name == "Nott'm Forest":
+        return 'Forest'
+    elif team_name == "Man Utd":
+        return 'Man United'
+    elif team_name == "Spurs":
+        return 'Tottenham'
+    return team_name
+
+
+def get_rating_for_team(team_ratings, team_name, date):
+    team_name = get_team_name_for_rating(team_name)
+    # print('INFO RATING', team_name)
+    previous_rating = team_ratings[(team_ratings['From'] <= date.strftime("%Y-%m-%d")) & (team_ratings['Club'] == team_name)]
+    last_rating = previous_rating.iloc[-1]
+    rating_value = last_rating['Elo']
+    return rating_value
+
+
+def get_teams_names():
+    result = []
+    teams = pd.read_csv('data/2022-23/teams.csv')
+    for t in teams.iterrows():
+        if t[1]['name'].replace(" ", "") == "Nott'mForest":
+            result.append('Forest')
+        elif t[1]['name'].replace(" ", "") == "ManUtd":
+            result.append('ManUnited')
+        elif t[1]['name'].replace(" ", "") == "Spurs":
+            result.append('Tottenham')
+        else:
+            result.append(t[1]['name'].replace(" ", ""))
+    return result
+
+
+def reload_all_teams_ratings():
+    result = pd.DataFrame()
+    for team in get_teams_names():
+        response = get_data('http://api.clubelo.com/' + team)
+        print(team, len(response))
+        rows = response.splitlines()
+        columns = rows[0].split(',')
+        content = []
+        for r in rows[1:]:
+            content.append(r.split(','))
+        df = pd.DataFrame(content, columns = columns)
+        result = pd.concat([result, df])
+    result = result.dropna()
+    result.to_csv('team_ratings_history.csv')
+    
+    
+def load_all_teams_ratings():
+    df = pd.read_csv('team_ratings_history.csv')
+    return df
+
+
+def add_team_rating(df):
+    team_ratings = load_all_teams_ratings()
+    
+    for i, row in df.iterrows():
+        # print('row', row)
+        # print('team', row['team'])
+        df.loc[i, 'team_rating'] = get_rating_for_team(team_ratings, row['team'], NEXT_GAMEWEEK_DATE)
+    return df
+
+
+def add_opposite_team_rating(df):
+    team_ratings = load_all_teams_ratings()
+    
+    for i, row in df.iterrows():
+        # print('row', df.columns)
+        # print('opp', row['opp_team'])
+        df.loc[i, 'opp_team_rating'] = get_rating_for_team(team_ratings, row['opp_team'], NEXT_GAMEWEEK_DATE)
+    return df
+
+
+def add_team_rating_diff(df):
+    df['rating_diff'] = ( df['team_rating'] - df['opp_team_rating'] ) / df['opp_team_rating']
+    return df
+
 
 def get_next_gameweek(df, gameweek_nr, rolling_columns):
-    # dropping rows before transfers
+    # dropping rows before transfers to their current teams
+    # print(df)
     df_unique_players = df[['player_name', 'team']].drop_duplicates(subset=['player_name'], keep='last')
     df_unique_players = pd.DataFrame(df_unique_players.dropna())
-    # print(df_unique_players)
+    
     teams = get_team_for_current_season()
     fixtures = get_fixtures_data()
     
@@ -302,38 +398,32 @@ def get_next_gameweek(df, gameweek_nr, rolling_columns):
     
     # getting a game for every player
     for player in df_unique_players.iterrows():
-        # print(player[1])
         player = player[1]
         team = teams[teams['name'] == player['team']]
-        # print(player[0], team['name'])
-        # print(team)
-        # print(team['id'])
         team_id = int(team['id'])
-        # print(player[1]['player_name'], 'team_id', team_id)
-        # print(type( team_id))
         next_fixture = get_fixtures_for_next_gw_by_id(fixtures, 3, team_id)
+        # print('NEXT FIXTURE')
         # print(next_fixture)
         player_next_fixture = pd.DataFrame(next_fixture[['event', 'kickoff_time', 'team_a', 'team_h']])
         player_next_fixture['name'] = player['player_name']
         player_next_fixture['team_h'] = get_team_by_id(player_next_fixture['team_h'].iloc[0])
         player_next_fixture['team_a'] = get_team_by_id(player_next_fixture['team_a'].iloc[0])
-        # print(player_next_fixture['team_h'])
-        # print(player_next_fixture['team_h'].iloc[0])
+        player_next_fixture['team'] = player['team']
         if player['team'] == player_next_fixture['team_h'].iloc[0]:
             player_next_fixture['was_home'] = 1
+            player_next_fixture['opp_team'] = player_next_fixture['team_a']
         else:
             player_next_fixture['was_home'] = 0
+            player_next_fixture['opp_team'] = player_next_fixture['team_h']
         next_gameweek = pd.concat([next_gameweek, player_next_fixture])
-        # print(player)
-        
-    # print(df_unique_players)
-    # print(len(next_gameweek))
+
     
     next_gameweek = next_gameweek.reset_index()
     next_gameweek = next_gameweek.drop(columns='index')
     next_gameweek = next_gameweek.sort_values(by='kickoff_time')
     next_gameweek['next_gameweek'] = True
     
+    # renaming columns
     next_gameweek = next_gameweek.rename(columns = {'team_h': 'h_team', 'team_a': 'a_team', 'event': 'fixture'})
     
     df['next_gameweek'] = False
@@ -343,54 +433,26 @@ def get_next_gameweek(df, gameweek_nr, rolling_columns):
     
     next_gameweek['was_home'] = next_gameweek['was_home'].astype(int)
     
+    # team ratings
+    next_gameweek = add_team_rating(next_gameweek)
+    next_gameweek = add_opposite_team_rating(next_gameweek)
+    next_gameweek = add_team_rating_diff(next_gameweek)
+    
     return next_gameweek
-    
 
-# def add_rolling_columns_for_next_gw(df, rolling_columns):
-#     print(df[(df['name'] == 'Harvey Elliott')])
-#     print(df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)])
-#     for c in rolling_columns:
-#         print( 'A', c, df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)][c + '_avg5'] )
-#         df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)][c + '_avg5'] = df[df['name'] == 'Harvey Elliott'].tail(5).mean()[c]
-#         print( 'B', c, df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)][c + '_avg5'].iloc[0] )
-#         print( 'C', df[df['name'] == 'Harvey Elliott'].tail(5).mean()[c] )
-#         print('D', df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)])
-    
-    
-#     # for player_name in df[df['next_gameweek'] == True]['name']:
-#     #     # print(df[(df['name'] == 'Harvey Elliott')])
-#     #     # print(df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)])
-#     #     print(df[df['name'] == player_name].tail(5).mean())
-#     #     for c in rolling_columns:
-#     #         df[(df['name'] == player_name) & (df['next_gameweek'] == True)][c + '_avg5'] = df[df['name'] == player_name].tail(5).mean()[c]
-#     return df
 
 def add_rolling_columns_for_next_gw(df, rolling_columns):
-    # print(df[(df['name'] == 'Harvey Elliott')])
-    # print(df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)])
-    # for c in rolling_columns:
-    #     print( 'A', c, df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)][c + '_avg5'] )
-    #     df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)][c + '_avg5'] = df[df['name'] == 'Harvey Elliott'].tail(5).mean()[c]
-    #     print( 'B', c, df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)][c + '_avg5'].iloc[0] )
-    #     print( 'C', df[df['name'] == 'Harvey Elliott'].tail(5).mean()[c] )
-    #     print('D', df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)])
-    
-    
-    # for player_name in df[df['next_gameweek'] == True]['name']:
-    #     # print(df[(df['name'] == 'Harvey Elliott')])
-    #     # print(df[(df['name'] == 'Harvey Elliott') & (df['next_gameweek'] == True)])
-    #     print(df[df['name'] == player_name].tail(5).mean())
-    #     for c in rolling_columns:
-    #         df[(df['name'] == player_name) & (df['next_gameweek'] == True)][c + '_avg5'] = df[df['name'] == player_name].tail(5).mean()[c]
-    
-    
     for i, row in df.iterrows():
         if row['next_gameweek'] == True:
             player_name = row['name']
-            # print(player_name)
             for c in rolling_columns:
-                # print(df)
-                df.loc[i, c + '_avg5' ] = df[df['name'] == player_name].tail(5).mean()[c]
+                # print('PROBLEM', df[df['name'] == player_name])
+                # print('COLUMNS', df.columns)
+                # print('xG', df[df['name'] == player_name]['xG'])
+                # print('A', df[df['name'] == player_name].tail(6).head(5)[c])
+                # print('B', np.array(df[df['name'] == player_name].tail(6).head(5)[c]))
+                # print('C', mean([float(i) for i in np.array(df[df['name'] == player_name].tail(6).head(5)[c])]))
+                df.loc[i, c + '_avg5' ] = mean([float(i) for i in np.array(df[df['name'] == player_name].tail(6).head(5)[c])])
     return df
     
     
