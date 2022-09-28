@@ -162,58 +162,42 @@ def merge_player(player, merged_h_team, merged_a_team, rolling_columns):
     return merged
 
 
+def get_merged_a_team(fpl_player, understat_player, player_team):
+    merged_a_team = fpl_player.merge(understat_player, on=['season', 'a_team'], suffixes=['_fpl', '_und'])
+    merged_a_team = merged_a_team[merged_a_team['a_team'] != player_team]
+    merged_a_team['h_team'] = player_team
+    return merged_a_team
+
+def get_merged_h_team(fpl_player, understat_player, player_team):
+    merged_h_team = fpl_player.merge(understat_player, on=['season', 'h_team'], how='inner', suffixes=['_fpl', '_und'])
+    merged_h_team = merged_h_team[merged_h_team['h_team'] != player_team]
+    merged_h_team['a_team'] = player_team
+    return merged_h_team
+
+
 def load_player(player, fpl_data, rolling_columns):
+    # getting data from understat and fpl
     understat_player = get_understand_player(player)
-    
     fpl_player = get_fpl_player(player, fpl_data)
     
+    # no data found
     if len(understat_player) == 0 or len(fpl_player) == 0:
         return
     
     player_team = fpl_player.iloc[-1]['team']
     
-    if len(understat_player) > 0 and understat_player.loc[0]['player_name'] == 'Mohamed Salah':
-        print('SALAH U F')
-        print(len(understat_player))
-        print(len(fpl_player))
-        print(type(fpl_player))
-        # fpl_player = pd.DataFrame(fpl_player.iloc[0])
-        print(type(fpl_player))
-        print(fpl_player)
-        print(understat_player)
-        print(player_team)
-        
-#     if player['player_name'] == 'Kalidou Koulibaly':
-#         print('U', understat_player[['season', 'a_team', 'h_team']])
-#         print('F', fpl_player[['season', 'a_team', 'h_team']])
-        
-#     if player['player_name'] == 'Kevin De Bruyne':
-#         print('U', understat_player[['season', 'a_team', 'h_team']])
-#         print('F', fpl_player[['season', 'a_team', 'h_team']])
-    
     # fpl joined with understat
-    merged_a_team = fpl_player.merge(understat_player, on=['season', 'a_team'], suffixes=['_fpl', '_und'])
-    merged_a_team = merged_a_team[merged_a_team['a_team'] != player_team]
-    merged_a_team['h_team'] = player_team
-    merged_h_team = fpl_player.merge(understat_player, on=['season', 'h_team'], how='inner', suffixes=['_fpl', '_und'])
-    merged_h_team = merged_h_team[merged_h_team['h_team'] != player_team]
-    merged_h_team['a_team'] = player_team
+    merged_a_team = get_merged_a_team(fpl_player, understat_player, player_team)
+    merged_h_team = get_merged_h_team(fpl_player, understat_player, player_team)
     
-    if len(understat_player) > 0 and understat_player.loc[0]['player_name'] == 'Mohamed Salah':
-        print('SALAH A H')
-        print(len(merged_a_team))
-        print(len(merged_h_team))
+    # merging a_team with h_team
+    merged_player = merge_player(player, merged_h_team, merged_a_team, rolling_columns)
     
-    # if player['player_name'] == 'Kalidou Koulibaly':
-    #     print('A', merged_a_team)
-    #     print('H', merged_h_team)
-    
-    merged = merge_player(player, merged_h_team, merged_a_team, rolling_columns)
-    
-    return pd.DataFrame(merged)
+    return pd.DataFrame(merged_player)
 
     
 def load_every_player(epl_players, fpl_data, rolling_columns):
+    # empty dataset
     dataset = pd.DataFrame([])
     
     for player in epl_players.head(100).iterrows():
@@ -221,8 +205,11 @@ def load_every_player(epl_players, fpl_data, rolling_columns):
         
         # merged rows with current dataset
         merged = load_player(player, fpl_data, rolling_columns)
+        
+        # appending to dataset
         dataset = pd.concat([dataset, merged])
         
+    # sorting by kickoff time
     dataset = dataset.sort_values(by='kickoff_time')
     return dataset
 
@@ -244,7 +231,6 @@ def add_opp_team(df):
     
 def load_previous_games(rolling_columns):
     epl_players = get_epl_players()
-        
     fpl_data = get_fpl_data()
     
     dataset = load_every_player(epl_players, fpl_data, rolling_columns)
@@ -253,9 +239,7 @@ def load_previous_games(rolling_columns):
     dataset = exclude_columns(dataset, excluded_columns)
     dataset['was_home'] = dataset['was_home'].astype(int)
     
-    
     dataset = dataset.dropna(subset = ['team'])
-    
     dataset = add_opp_team(dataset)
     
     # team ratings
@@ -385,15 +369,39 @@ def add_team_rating_diff(df):
     return df
 
 
+def add_team_rating_columns(df):    
+    df = add_team_rating(df)
+    df = add_opposite_team_rating(df)
+    df = add_team_rating_diff(df)
+    return df
+
+
+def add_columns_for_next_fixture(player_next_fixture, player):
+    player_next_fixture['name'] = player['player_name']
+    player_next_fixture['team_h'] = get_team_by_id(player_next_fixture['team_h'].iloc[0])
+    player_next_fixture['team_a'] = get_team_by_id(player_next_fixture['team_a'].iloc[0])
+    player_next_fixture['team'] = player['team']
+    return player_next_fixture
+
+def add_home_and_opp_team(player_next_fixture, player):
+    if player['team'] == player_next_fixture['team_h'].iloc[0]:
+        player_next_fixture['was_home'] = 1
+        player_next_fixture['opp_team'] = player_next_fixture['team_a']
+    else:
+        player_next_fixture['was_home'] = 0
+        player_next_fixture['opp_team'] = player_next_fixture['team_h']
+    return player_next_fixture
+
+
 def get_next_gameweek(df, gameweek_nr, rolling_columns):
     # dropping rows before transfers to their current teams
-    # print(df)
     df_unique_players = df[['player_name', 'team']].drop_duplicates(subset=['player_name'], keep='last')
     df_unique_players = pd.DataFrame(df_unique_players.dropna())
     
     teams = get_team_for_current_season()
     fixtures = get_fixtures_data()
     
+    # empty next gameweek
     next_gameweek = pd.DataFrame()
     
     # getting a game for every player
@@ -401,20 +409,21 @@ def get_next_gameweek(df, gameweek_nr, rolling_columns):
         player = player[1]
         team = teams[teams['name'] == player['team']]
         team_id = int(team['id'])
-        next_fixture = get_fixtures_for_next_gw_by_id(fixtures, 3, team_id)
-        # print('NEXT FIXTURE')
-        # print(next_fixture)
+        
+        # last fixture for a player
+        last_fixture = df[df['player_name'] == player['player_name']].iloc[-1]
+        
+        # print(last_fixture)
+        
+        next_fixture = get_fixtures_for_next_gw_by_id(fixtures, NEXT_GAMEWEEK, team_id)
+
         player_next_fixture = pd.DataFrame(next_fixture[['event', 'kickoff_time', 'team_a', 'team_h']])
-        player_next_fixture['name'] = player['player_name']
-        player_next_fixture['team_h'] = get_team_by_id(player_next_fixture['team_h'].iloc[0])
-        player_next_fixture['team_a'] = get_team_by_id(player_next_fixture['team_a'].iloc[0])
-        player_next_fixture['team'] = player['team']
-        if player['team'] == player_next_fixture['team_h'].iloc[0]:
-            player_next_fixture['was_home'] = 1
-            player_next_fixture['opp_team'] = player_next_fixture['team_a']
-        else:
-            player_next_fixture['was_home'] = 0
-            player_next_fixture['opp_team'] = player_next_fixture['team_h']
+        
+        player_next_fixture = add_columns_for_next_fixture(player_next_fixture, player)
+        player_next_fixture = add_home_and_opp_team(player_next_fixture, player)
+        
+        player_next_fixture['position_fpl'] = last_fixture['position_fpl']
+        
         next_gameweek = pd.concat([next_gameweek, player_next_fixture])
 
     
@@ -434,9 +443,7 @@ def get_next_gameweek(df, gameweek_nr, rolling_columns):
     next_gameweek['was_home'] = next_gameweek['was_home'].astype(int)
     
     # team ratings
-    next_gameweek = add_team_rating(next_gameweek)
-    next_gameweek = add_opposite_team_rating(next_gameweek)
-    next_gameweek = add_team_rating_diff(next_gameweek)
+    next_gameweek = add_team_rating_columns(next_gameweek)
     
     return next_gameweek
 
@@ -446,20 +453,15 @@ def add_rolling_columns_for_next_gw(df, rolling_columns):
         if row['next_gameweek'] == True:
             player_name = row['name']
             for c in rolling_columns:
-                # print('PROBLEM', df[df['name'] == player_name])
-                # print('COLUMNS', df.columns)
-                # print('xG', df[df['name'] == player_name]['xG'])
-                # print('A', df[df['name'] == player_name].tail(6).head(5)[c])
-                # print('B', np.array(df[df['name'] == player_name].tail(6).head(5)[c]))
-                # print('C', mean([float(i) for i in np.array(df[df['name'] == player_name].tail(6).head(5)[c])]))
                 df.loc[i, c + '_avg5' ] = mean([float(i) for i in np.array(df[df['name'] == player_name].tail(6).head(5)[c])])
     return df
     
     
 def merged_understat_and_fpl(rolling_columns = [], save_to_file = False):
-    # returns entire dataset
+    # returns all previous performances
     dataset = load_previous_games(rolling_columns)
 
+    # saving to file
     if save_to_file:
         dataset.to_csv('merged_dataset.csv')
 

@@ -20,5 +20,5 @@ def get_metrics(y_true, y_pred):
 
 CURRENT_SEASON_FPL = '2022-23'
 CURRENT_SEASON_UNDERSTAT = '2022'
-NEXT_GAMEWEEK = 3
-NEXT_GAMEWEEK_DATE = datetime.datetime(2022, 8, 20)
+NEXT_GAMEWEEK = 9
+NEXT_GAMEWEEK_DATE = datetime.datetime(2022, 9, 30)
