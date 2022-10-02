@@ -11,26 +11,6 @@ import numpy as np
 
 import match_names as mn
 
-def get_dataset():
-    # dataset consisting of performances of epl players
-    # in every game recorded on understat
-    epl_players = get_epl_data()[1]
-    epl_players = pd.DataFrame(epl_players)
-
-    dataset = pd.DataFrame([])
-
-    for player in epl_players.head(3).iterrows():
-        #player.to_csv('example.csv')
-        player = player[1]
-        print('player', player)
-        id = player['id']
-        print('ID ', id)
-        player_data = get_player_data(id)
-        player_data = pd.DataFrame(player_data[0])
-        dataset = pd.concat([dataset, player_data])
-
-    return dataset
-
 
 def find_fpl_name(player):
     fpl_name = player['player_name']
@@ -82,7 +62,7 @@ def get_epl_players():
 def add_opp_team_for_current_season(dataset):
     teams = pd.read_csv('data/2022-23/teams.csv')
     
-    print(dataset.iloc[1])
+    # print(dataset.iloc[1])
     print('LENGTH', dataset[dataset['season'] == CURRENT_SEASON_UNDERSTAT].shape)
     
     for i, row in dataset[dataset['season'] == CURRENT_SEASON_UNDERSTAT].iterrows():
@@ -92,11 +72,15 @@ def add_opp_team_for_current_season(dataset):
 
 
 def add_missing_a_h_team(df):
+    index = 0
     for i, row in df.iterrows():
         if row['was_home'] == 1:
-            df.at[i, 'h_team'] = row['team']
+            df.at[index, 'h_team'] = row['team']
         else:
-            df.at[i, 'a_team'] = row['team']
+            # print(df.iloc[0])
+            df.at[index, 'a_team'] = row['team']
+            
+        index += 1
         
     return df
 
@@ -179,6 +163,10 @@ def load_player(player, fpl_data, rolling_columns):
     # getting data from understat and fpl
     understat_player = get_understand_player(player)
     fpl_player = get_fpl_player(player, fpl_data)
+    
+    if player['player_name'] == 'Mohamed Salah':
+        print(fpl_player)
+        
     
     # no data found
     if len(understat_player) == 0 or len(fpl_player) == 0:
@@ -358,8 +346,6 @@ def add_opposite_team_rating(df):
     team_ratings = load_all_teams_ratings()
     
     for i, row in df.iterrows():
-        # print('row', df.columns)
-        # print('opp', row['opp_team'])
         df.loc[i, 'opp_team_rating'] = get_rating_for_team(team_ratings, row['opp_team'], NEXT_GAMEWEEK_DATE)
     return df
 
@@ -398,6 +384,8 @@ def get_next_gameweek(df, gameweek_nr, rolling_columns):
     df_unique_players = df[['player_name', 'team']].drop_duplicates(subset=['player_name'], keep='last')
     df_unique_players = pd.DataFrame(df_unique_players.dropna())
     
+    print(df_unique_players[df_unique_players['player_name'] == 'Ben Mee'])
+    
     teams = get_team_for_current_season()
     fixtures = get_fixtures_data()
     
@@ -407,13 +395,14 @@ def get_next_gameweek(df, gameweek_nr, rolling_columns):
     # getting a game for every player
     for player in df_unique_players.iterrows():
         player = player[1]
+        print('PLAYER', player)
+        print('PLAYER TEAM', player['team'])
         team = teams[teams['name'] == player['team']]
+        print('TEAM', team)
         team_id = int(team['id'])
         
         # last fixture for a player
         last_fixture = df[df['player_name'] == player['player_name']].iloc[-1]
-        
-        # print(last_fixture)
         
         next_fixture = get_fixtures_for_next_gw_by_id(fixtures, NEXT_GAMEWEEK, team_id)
 

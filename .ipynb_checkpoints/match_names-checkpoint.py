@@ -97,13 +97,5 @@ names = {
     'Jefferson Lerma': 'Jefferson Lerma Solís',
     'Taiwo Awoniyi': '',
     'Darwin Núñez': 'Darwin Núñez',
-    'Ivan Perisic': 'Ivan Perišić',
-    'Kieffer Moore': '',
-    'Steve Cook': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
-    '': '',
+    'Ivan Perisic': 'Ivan Perišić'
 }

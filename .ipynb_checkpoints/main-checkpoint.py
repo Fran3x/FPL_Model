@@ -1,8 +1,6 @@
 import sys
 import pprint
 import pandas as pd
- 
-sys.path.insert(0, 'C:/Users/user/Desktop/FPL_ML/vaastav')
 
 from getters import *
 from understat import *
@@ -15,7 +13,7 @@ from sklearn.metrics import mean_squared_error
 
 import matplotlib.pyplot as plt
 
-#data = import_merged_gw('2021-22')
+data = import_merged_gw('2021-22')
 # print(data)
 pp = pprint.PrettyPrinter()
 #id_players('vaastav\data\cleaned_merged_seasons.csv', 'ids')
@@ -80,5 +78,3 @@ points_model = PointsPredictorModel()
 points_model.fit(X_train.values, y_train.values)
 
 print(points_model.predict([[3, 1]]))
-
-print('abc')
