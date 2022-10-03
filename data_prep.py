@@ -47,9 +47,10 @@ def exclude_columns(df, excluded_columns):
     return df
 
 
-def add_rolling_columns(df, rolling_columns):
-    for c in rolling_columns:
-        df[c + '_avg5'] = df[c].rolling(5, min_periods=1).mean()
+def add_rolling_columns(df, rolling_columns, gameweeks_for_averages):
+    for gw_avg in gameweeks_for_averages:
+        for c in rolling_columns:
+            df[c + '_avg' + str(gw_avg)] = df[c].rolling(gw_avg, min_periods=1).mean()
     return df
 
 
@@ -65,7 +66,7 @@ def add_opp_team_for_current_season(dataset):
     # print(dataset.iloc[1])
     print('LENGTH', dataset[dataset['season'] == CURRENT_SEASON_UNDERSTAT].shape)
     
-    for i, row in dataset[dataset['season'] == CURRENT_SEASON_UNDERSTAT].iterrows():
+    for i, row in dataset[(dataset['season'] == CURRENT_SEASON_UNDERSTAT) | (dataset['season'] == CURRENT_SEASON_FPL)].iterrows():
         dataset.at[i, 'opp_team_name'] = teams[teams['id'] == row['opponent_team']].iloc[0]['name']
 
     return dataset
@@ -123,7 +124,7 @@ def get_fpl_player(player, fpl_data):
     return fpl_player
 
 
-def merge_player(player, merged_h_team, merged_a_team, rolling_columns):
+def merge_player(player, merged_h_team, merged_a_team, rolling_columns, gameweeks_for_averages):
     if (len(merged_a_team) == 0 and len(merged_h_team) == 0 ):
         print(player['id'])
         print('Name', player['player_name'])
@@ -137,7 +138,7 @@ def merge_player(player, merged_h_team, merged_a_team, rolling_columns):
     merged = pd.concat([merged_a_team, merged_h_team])
     
     # adding rolling columns
-    merged = add_rolling_columns(merged, rolling_columns)
+    merged = add_rolling_columns(merged, rolling_columns, gameweeks_for_averages)
     
     # indicating that game was played
     merged['was_played'] = 1
@@ -159,7 +160,7 @@ def get_merged_h_team(fpl_player, understat_player, player_team):
     return merged_h_team
 
 
-def load_player(player, fpl_data, rolling_columns):
+def load_player(player, fpl_data, rolling_columns, gameweeks_for_averages):
     # getting data from understat and fpl
     understat_player = get_understand_player(player)
     fpl_player = get_fpl_player(player, fpl_data)
@@ -179,12 +180,12 @@ def load_player(player, fpl_data, rolling_columns):
     merged_h_team = get_merged_h_team(fpl_player, understat_player, player_team)
     
     # merging a_team with h_team
-    merged_player = merge_player(player, merged_h_team, merged_a_team, rolling_columns)
+    merged_player = merge_player(player, merged_h_team, merged_a_team, rolling_columns, gameweeks_for_averages)
     
     return pd.DataFrame(merged_player)
 
     
-def load_every_player(epl_players, fpl_data, rolling_columns):
+def load_every_player(epl_players, fpl_data, rolling_columns, gameweeks_for_averages):
     # empty dataset
     dataset = pd.DataFrame([])
     
@@ -192,7 +193,7 @@ def load_every_player(epl_players, fpl_data, rolling_columns):
         player = player[1]
         
         # merged rows with current dataset
-        merged = load_player(player, fpl_data, rolling_columns)
+        merged = load_player(player, fpl_data, rolling_columns, gameweeks_for_averages)
         
         # appending to dataset
         dataset = pd.concat([dataset, merged])
@@ -217,11 +218,11 @@ def add_opp_team(df):
     return df
 
     
-def load_previous_games(rolling_columns):
+def load_previous_games(rolling_columns, gameweeks_for_averages):
     epl_players = get_epl_players()
     fpl_data = get_fpl_data()
     
-    dataset = load_every_player(epl_players, fpl_data, rolling_columns)
+    dataset = load_every_player(epl_players, fpl_data, rolling_columns, gameweeks_for_averages)
 
     excluded_columns = ['h_team_und', 'a_team_und', 'h_team_fpl', 'a_team_fpl', 'roster_id']
     dataset = exclude_columns(dataset, excluded_columns)
@@ -379,12 +380,12 @@ def add_home_and_opp_team(player_next_fixture, player):
     return player_next_fixture
 
 
-def get_next_gameweek(df, gameweek_nr, rolling_columns):
+def get_next_gameweek(df, gameweek_nr, rolling_columns, gameweeks_for_averages):
     # dropping rows before transfers to their current teams
     df_unique_players = df[['player_name', 'team']].drop_duplicates(subset=['player_name'], keep='last')
     df_unique_players = pd.DataFrame(df_unique_players.dropna())
     
-    print(df_unique_players[df_unique_players['player_name'] == 'Ben Mee'])
+    # print(df_unique_players[df_unique_players['player_name'] == 'Ben Mee'])
     
     teams = get_team_for_current_season()
     fixtures = get_fixtures_data()
@@ -395,10 +396,10 @@ def get_next_gameweek(df, gameweek_nr, rolling_columns):
     # getting a game for every player
     for player in df_unique_players.iterrows():
         player = player[1]
-        print('PLAYER', player)
-        print('PLAYER TEAM', player['team'])
+        # print('PLAYER', player)
+        # print('PLAYER TEAM', player['team'])
         team = teams[teams['name'] == player['team']]
-        print('TEAM', team)
+        # print('TEAM', team)
         team_id = int(team['id'])
         
         # last fixture for a player
@@ -425,7 +426,7 @@ def get_next_gameweek(df, gameweek_nr, rolling_columns):
     next_gameweek = next_gameweek.rename(columns = {'team_h': 'h_team', 'team_a': 'a_team', 'event': 'fixture'})
     
     df['next_gameweek'] = False
-    next_gameweek = add_rolling_columns_for_next_gw(pd.concat([df, next_gameweek]), rolling_columns)
+    next_gameweek = add_rolling_columns_for_next_gw(pd.concat([df, next_gameweek]), rolling_columns, gameweeks_for_averages)
     
     next_gameweek = next_gameweek[next_gameweek['next_gameweek'] == True]
     
@@ -437,18 +438,19 @@ def get_next_gameweek(df, gameweek_nr, rolling_columns):
     return next_gameweek
 
 
-def add_rolling_columns_for_next_gw(df, rolling_columns):
+def add_rolling_columns_for_next_gw(df, rolling_columns, gameweeks_for_averages):
     for i, row in df.iterrows():
         if row['next_gameweek'] == True:
             player_name = row['name']
-            for c in rolling_columns:
-                df.loc[i, c + '_avg5' ] = mean([float(i) for i in np.array(df[df['name'] == player_name].tail(6).head(5)[c])])
+            for gw_avg in gameweeks_for_averages:
+                for c in rolling_columns:
+                    df.loc[i, c + '_avg' + str(gw_avg)] = mean([float(i) for i in np.array(df[df['name'] == player_name].tail(gw_avg + 1).head(gw_avg)[c])])
     return df
     
     
-def merged_understat_and_fpl(rolling_columns = [], save_to_file = False):
+def merged_understat_and_fpl(rolling_columns = [], gameweeks_for_averages = [], save_to_file = False):
     # returns all previous performances
-    dataset = load_previous_games(rolling_columns)
+    dataset = load_previous_games(rolling_columns, gameweeks_for_averages)
 
     # saving to file
     if save_to_file:

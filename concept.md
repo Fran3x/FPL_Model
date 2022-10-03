@@ -53,6 +53,7 @@ Features:
     
 - Other:
     - 'was_home'
+    
 
 
 Feature ideas:
@@ -76,3 +77,12 @@ Other ideas:
 
 Disclaimers:
 Emerson appears twice in epl_players
+
+
+
+
+
+How to update data:
+- new data folder from /vaastav
+- calling update.ipynb to merge previous_season with this_season and save it to fpl_players.csv
+- merging fpl with understat using data_prep.py
