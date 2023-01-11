@@ -1,0 +1,13 @@
+cards_yellow,dribbles_completed,tackles,match_report,cards_red,goals,passes_completed,round,position,bench_explain,pens_att,passes_pct,progressive_passes,comp,minutes,date,game_started,touches,interceptions,sca,dribbles,shots_on_target,passes,assists,pens_made,xg_assist,gca,shots,venue,xg,result,blocks,dayofweek,team,npxg,opponent
+0,0,1,,0,0,88,Group stage,CB,,0,92.6,1,Conf Lg,75,2022-10-27,Y,98,1,0,0,0,95,0,0,0.0,0,1,Home,0.0,W 1–0,0,Thu,"<span title=""England""><span class=""f-i f-gb-eng"" style="""">eng</span></span>",0.0,Silkeborg
+1,0,1,,0,0,58,Group stage,CB,,0,82.9,2,Conf Lg,90,2022-11-03,Y,79,1,0,1,0,70,0,0,0.0,0,1,Away,0.0,W 3–0,2,Thu,"<span title=""England""><span class=""f-i f-gb-eng"" style="""">eng</span></span>",0.0,FCSB
+,,,,,,,Matchweek 15,,"On matchday squad, but did not play",,,,Premier League,,2022-11-06,N,,,,,,,,,,,,Home,,L 1–2,,Sun,"<a href=""/en/squads/7c21e445/West-Ham-United-Stats"">West Ham</a>",,Crystal Palace
+0,,,,0,0,,Third round,CB,,0,,,EFL Cup,90,2022-11-09,Y,,2,,,0,,0,0,,,2,Home,,D 2 ,,Wed,"<a href=""/en/squads/7c21e445/West-Ham-United-Stats"">West Ham</a>",,Blackburn
+0,0,1,,0,0,39,Matchweek 16,CB,,0,78.0,1,Premier League,76,2022-11-12,N,56,1,1,0,0,50,0,0,0.0,0,1,Home,0.1,L 0–2,1,Sat,"<a href=""/en/squads/7c21e445/West-Ham-United-Stats"">West Ham</a>",0.1,Leicester City
+0,,,,0,0,,Friendlies (M),CB,,0,,,Friendlies (M),90,2022-11-17,Y,,,,,,,0,0,,,,Neutral,,W 3–0,,Thu,"<span title=""Morocco""><span class=""f-i f-ma"" style="""">ma</span></span>",,Georgia
+0,0,1,,0,0,41,Group stage,CB,,0,87.2,0,World Cup,90,2022-11-23,Y,55,1,0,0,0,47,0,0,0.0,0,0,Neutral,0.0,D 0–0,1,Wed,"<span title=""Morocco""><span class=""f-i f-ma"" style="""">ma</span></span>",0.0,Croatia
+0,0,1,,0,0,40,Group stage,CB,,0,88.9,2,World Cup,90,2022-11-27,Y,51,1,2,0,0,45,0,0,0.0,0,0,Neutral,0.0,W 2–0,2,Sun,"<span title=""Morocco""><span class=""f-i f-ma"" style="""">ma</span></span>",0.0,Belgium
+0,0,1,,0,0,37,Group stage,CB,,0,84.1,0,World Cup,90,2022-12-01,Y,50,2,1,0,0,44,0,0,0.0,1,0,Neutral,0.0,W 2–1,0,Thu,"<span title=""Morocco""><span class=""f-i f-ma"" style="""">ma</span></span>",0.0,Canada
+0,0,1,,0,0,19,Round of 16,CB,,0,86.4,1,World Cup,83,2022-12-06,Y,29,0,0,0,0,22,0,0,0.0,0,1,Neutral,0.2,D 0 ,0,Tue,"<span title=""Morocco""><span class=""f-i f-ma"" style="""">ma</span></span>",0.2,Spain
+,,,,,,,Semi-finals,,"On matchday squad, but did not play",,,,World Cup,,2022-12-14,N,,,,,,,,,,,,Neutral,,L 0–2,,Wed,"<span title=""Morocco""><span class=""f-i f-ma"" style="""">ma</span></span>",,France
+,,,,,,,Third-place match,,"On matchday squad, but did not play",,,,World Cup,,2022-12-17,N,,,,,,,,,,,,Neutral,,L 1–2,,Sat,"<span title=""Morocco""><span class=""f-i f-ma"" style="""">ma</span></span>",,Croatia
