@@ -1,18 +1,61 @@
-cards_yellow,npxg,dribbles_completed,tackles,cards_red,goals,passes_completed,round,position,bench_explain,pens_att,passes_pct,progressive_passes,comp,minutes,date,game_started,touches,interceptions,sca,dribbles,shots_on_target,passes,assists,pens_made,xg_assist,gca,shots,venue,xg,result,blocks,dayofweek,team,match_report,opponent
-,,,,,,,Matchweek 1,,"On matchday squad, but did not play",,,,Premier League,,2022-08-06,N,,,,,,,,,,,,Away,,W 1�0,,Sat,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Everton
-,,,,,,,Matchweek 2,,"On matchday squad, but did not play",,,,Premier League,,2022-08-14,N,,,,,,,,,,,,Home,,D 2�2,,Sun,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Tottenham
-,,,,,,,Matchweek 3,,"On matchday squad, but did not play",,,,Premier League,,2022-08-21,N,,,,,,,,,,,,Away,,L 0�3,,Sun,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Leeds United
-,,,,,,,Matchweek 4,,"On matchday squad, but did not play",,,,Premier League,,2022-08-27,N,,,,,,,,,,,,Home,,W 2�1,,Sat,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Leicester City
-,,,,,,,Matchweek 5,,"On matchday squad, but did not play",,,,Premier League,,2022-08-30,N,,,,,,,,,,,,Away,,L 1�2,,Tue,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Southampton
-,,,,,,,Matchweek 6,,"On matchday squad, but did not play",,,,Premier League,,2022-09-03,N,,,,,,,,,,,,Home,,W 2�1,,Sat,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,West Ham
-0,0.0,0,0,0,0,10,Group stage,GK,,0,71.4,0,Champions Lg,90,2022-09-06,Y,16,0,0,0,0,14,0,0,0.0,0,0,Away,0.0,L 0�1,0,Tue,"<span title=""England""><span class=""f-i f-gb-eng"" style="""">eng</span></span>",,Dinamo Zagreb
-0,0.0,0,0,0,0,28,Group stage,GK,,0,71.8,0,Champions Lg,90,2022-09-14,Y,41,0,0,0,0,39,0,0,0.0,0,0,Home,0.0,D 1�1,0,Wed,"<span title=""England""><span class=""f-i f-gb-eng"" style="""">eng</span></span>",,RB Salzburg
-0,0.0,0,1,0,0,20,Matchweek 9,GK,,0,87.0,0,Premier League,90,2022-10-01,Y,26,0,0,0,0,23,0,0,0.0,0,0,Away,0.0,W 2�1,0,Sat,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Crystal Palace
-0,0.0,0,0,0,0,13,Group stage,GK,,0,52.0,0,Champions Lg,90,2022-10-05,Y,26,0,0,0,0,25,0,0,0.0,0,0,Home,0.0,W 3�0,0,Wed,"<span title=""England""><span class=""f-i f-gb-eng"" style="""">eng</span></span>",,Milan
-0,0.0,0,1,0,0,28,Matchweek 10,GK,,0,87.5,0,Premier League,90,2022-10-08,Y,33,0,0,0,0,32,0,0,0.0,0,0,Home,0.0,W 3�0,0,Sat,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Wolves
-0,0.0,0,0,0,0,29,Group stage,GK,,0,87.9,0,Champions Lg,90,2022-10-11,Y,34,1,0,0,0,33,0,0,0.0,0,0,Away,0.0,W 2�0,0,Tue,"<span title=""England""><span class=""f-i f-gb-eng"" style="""">eng</span></span>",,Milan
-0,0.0,0,0,0,0,33,Matchweek 11,GK,,0,80.5,0,Premier League,90,2022-10-16,Y,46,0,0,0,0,41,0,0,0.0,0,0,Away,0.0,W 2�0,0,Sun,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Aston Villa
-0,0.0,0,0,0,0,22,Matchweek 12,GK,,0,62.9,0,Premier League,90,2022-10-19,Y,39,0,1,0,0,35,0,0,0.0,0,0,Away,0.0,D 0�0,0,Wed,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Brentford
-0,0.0,0,0,0,0,39,Matchweek 13,GK,,0,73.6,0,Premier League,90,2022-10-22,Y,58,0,0,0,0,53,0,0,0.0,0,0,Home,0.0,D 1�1,0,Sat,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Manchester Utd
-1,0.0,0,0,0,0,32,Group stage,GK,,0,69.6,0,Champions Lg,90,2022-10-25,Y,48,0,0,0,0,46,0,0,0.0,0,0,Away,0.0,W 2�1,0,Tue,"<span title=""England""><span class=""f-i f-gb-eng"" style="""">eng</span></span>",,RB Salzburg
-0,0.0,0,0,0,0,14,Matchweek 14,GK,,0,87.5,0,Premier League,45,2022-10-29,Y,20,0,0,0,0,16,0,0,0.0,0,0,Away,0.0,L 1�4,0,Sat,"<a href=""/en/squads/cff3d9bb/Chelsea-Stats"">Chelsea</a>",,Brighton
+pens_made,sca,carries,pens_att,blocks,dayofweek,gca,comp,assists,progressive_passes,touches,xg,position,pressures,date,shots_on_target,passes_completed,game_started,squad,shots_total,dribbles,xa,npxg,passes_pct,cards_yellow,passes,match_report,minutes,dribbles_completed,result,cards_red,bench_explain,progressive_carries,tackles,venue,goals,round,opponent,interceptions
+0,,,0,,Wed,,Super Cup,0,,,,,,2021-08-11,0,,N,Chelsea,0,,,,,1,,,2,,D 1 ,0,,,,Home,0,UEFA Super Cup,Villarreal,0
+,,,,,Sat,,Premier League,,,,,,,2021-08-14,,,N,Chelsea,,,,,,,,,,,W 3–0,,"On matchday squad, but did not play",,,Home,,Matchweek 1,Crystal Palace,
+,,,,,Sun,,Premier League,,,,,,,2021-08-22,,,N,Chelsea,,,,,,,,,,,W 2–0,,"On matchday squad, but did not play",,,Away,,Matchweek 2,Arsenal,
+,,,,,Sat,,Premier League,,,,,,,2021-08-28,,,N,Chelsea,,,,,,,,,,,D 1–1,,"On matchday squad, but did not play",,,Away,,Matchweek 3,Liverpool,
+,,,,,Sat,,Premier League,,,,,,,2021-09-11,,,N,Chelsea,,,,,,,,,,,W 3–0,,"On matchday squad, but did not play",,,Home,,Matchweek 4,Aston Villa,
+,,,,,Tue,,Champions Lg,,,,,,,2021-09-14,,,N,Chelsea,,,,,,,,,,,W 1–0,,"On matchday squad, but did not play",,,Home,,Group stage,Zenit,
+0,0,20,0,0,Sun,0,Premier League,0,0,31,0.0,GK,0,2021-09-19,0,28,Y,Chelsea,0,0,0.0,0.0,93.3,0,30,,90,0,W 3–0,0,,0,0,Away,0,Matchweek 5,Tottenham,0
+0,,,0,,Wed,,EFL Cup,0,,,,GK,,2021-09-22,0,,Y,Chelsea,0,,,,,0,,,90,,D 1 ,0,,,,Home,0,Third round,Aston Villa,0
+,,,,,Sat,,Premier League,,,,,,,2021-09-25,,,N,Chelsea,,,,,,,,,,,L 0–1,,"On matchday squad, but did not play",,,Home,,Matchweek 6,Manchester City,
+,,,,,Wed,,Champions Lg,,,,,,,2021-09-29,,,N,Chelsea,,,,,,,,,,,L 0–1,,"On matchday squad, but did not play",,,Away,,Group stage,Juventus,
+,,,,,Sat,,Premier League,,,,,,,2021-10-02,,,N,Chelsea,,,,,,,,,,,W 3–1,,"On matchday squad, but did not play",,,Home,,Matchweek 7,Southampton,
+,,,,,Sat,,Premier League,,,,,,,2021-10-16,,,N,Chelsea,,,,,,,,,,,W 1–0,,"On matchday squad, but did not play",,,Away,,Matchweek 8,Brentford,
+,,,,,Wed,,Champions Lg,,,,,,,2021-10-20,,,N,Chelsea,,,,,,,,,,,W 4–0,,"On matchday squad, but did not play",,,Home,,Group stage,Malmö,
+,,,,,Sat,,Premier League,,,,,,,2021-10-23,,,N,Chelsea,,,,,,,,,,,W 7–0,,"On matchday squad, but did not play",,,Home,,Matchweek 9,Norwich City,
+0,,,0,,Tue,,EFL Cup,0,,,,GK,,2021-10-26,0,,Y,Chelsea,0,,,,,0,,,90,,D 1 ,0,,,,Home,0,Fourth round,Southampton,0
+,,,,,Sat,,Premier League,,,,,,,2021-10-30,,,N,Chelsea,,,,,,,,,,,W 3–0,,"On matchday squad, but did not play",,,Away,,Matchweek 10,Newcastle Utd,
+,,,,,Tue,,Champions Lg,,,,,,,2021-11-02,,,N,Chelsea,,,,,,,,,,,W 1–0,,"On matchday squad, but did not play",,,Away,,Group stage,Malmö,
+,,,,,Sat,,Premier League,,,,,,,2021-11-06,,,N,Chelsea,,,,,,,,,,,D 1–1,,"On matchday squad, but did not play",,,Home,,Matchweek 11,Burnley,
+,,,,,Sat,,Premier League,,,,,,,2021-11-20,,,N,Chelsea,,,,,,,,,,,W 3–0,,"On matchday squad, but did not play",,,Away,,Matchweek 12,Leicester City,
+,,,,,Tue,,Champions Lg,,,,,,,2021-11-23,,,N,Chelsea,,,,,,,,,,,W 4–0,,"On matchday squad, but did not play",,,Home,,Group stage,Juventus,
+,,,,,Sun,,Premier League,,,,,,,2021-11-28,,,N,Chelsea,,,,,,,,,,,D 1–1,,"On matchday squad, but did not play",,,Home,,Matchweek 13,Manchester Utd,
+,,,,,Wed,,Premier League,,,,,,,2021-12-01,,,N,Chelsea,,,,,,,,,,,W 2–1,,"On matchday squad, but did not play",,,Away,,Matchweek 14,Watford,
+,,,,,Sat,,Premier League,,,,,,,2021-12-04,,,N,Chelsea,,,,,,,,,,,L 2–3,,"On matchday squad, but did not play",,,Away,,Matchweek 15,West Ham,
+0,0,14,0,0,Wed,0,Champions Lg,0,0,33,0.0,GK,0,2021-12-08,0,22,Y,Chelsea,0,0,0.0,0.0,75.9,0,29,,90,0,D 3–3,0,,0,0,Away,0,Group stage,Zenit,0
+,,,,,Sat,,Premier League,,,,,,,2021-12-11,,,N,Chelsea,,,,,,,,,,,W 3–2,,"On matchday squad, but did not play",,,Home,,Matchweek 16,Leeds United,
+,,,,,Thu,,Premier League,,,,,,,2021-12-16,,,N,Chelsea,,,,,,,,,,,D 1–1,,"On matchday squad, but did not play",,,Home,,Matchweek 17,Everton,
+,,,,,Sun,,Premier League,,,,,,,2021-12-19,,,N,Chelsea,,,,,,,,,,,D 0–0,,"On matchday squad, but did not play",,,Away,,Matchweek 18,Wolves,
+0,,,0,,Wed,,EFL Cup,0,,,,GK,,2021-12-22,0,,Y,Chelsea,0,,,,,0,,,90,,W 2–0,0,,,,Away,0,Quarter-finals,Brentford,0
+,,,,,Sun,,Premier League,,,,,,,2021-12-26,,,N,Chelsea,,,,,,,,,,,W 3–1,,"On matchday squad, but did not play",,,Away,,Matchweek 19,Aston Villa,
+,,,,,Wed,,Premier League,,,,,,,2021-12-29,,,N,Chelsea,,,,,,,,,,,D 1–1,,"On matchday squad, but did not play",,,Home,,Matchweek 20,Brighton,
+,,,,,Sun,,Premier League,,,,,,,2022-01-02,,,N,Chelsea,,,,,,,,,,,D 2–2,,"On matchday squad, but did not play",,,Home,,Matchweek 21,Liverpool,
+0,,,0,,Wed,,EFL Cup,0,,,,GK,,2022-01-05,0,,Y,Chelsea,0,,,,,0,,,90,,W 2–0,0,,,,Home,0,Semi-finals,Tottenham,0
+,,,,,Sat,,FA Cup,,,,,,,2022-01-08,,,N,Chelsea,,,,,,,,,,,W 5–1,,"On matchday squad, but did not play",,,Home,,Third round proper,Chesterfield,
+0,,,0,,Wed,,EFL Cup,0,,,,GK,,2022-01-12,0,,Y,Chelsea,0,,,,,0,,,90,,W 1–0,0,,,,Away,0,Semi-finals,Tottenham,1
+0,0,23,0,0,Sat,0,Premier League,0,0,48,0.0,GK,0,2022-01-15,0,26,Y,Chelsea,0,0,0.0,0.0,60.5,0,43,,90,0,L 0–1,0,,0,0,Away,0,Matchweek 22,Manchester City,0
+0,0,27,0,0,Tue,0,Premier League,0,0,40,0.0,GK,0,2022-01-18,0,36,Y,Chelsea,0,0,0.0,0.0,97.3,0,37,,90,0,D 1–1,0,,0,0,Away,0,Matchweek 24,Brighton,0
+0,0,15,0,0,Sun,0,Premier League,0,0,30,0.0,GK,0,2022-01-23,0,25,Y,Chelsea,0,0,0.0,0.0,86.2,0,29,,90,0,W 2–0,0,,0,0,Home,0,Matchweek 23,Tottenham,0
+0,,,0,,Sat,,FA Cup,0,,,,GK,,2022-02-05,0,,Y,Chelsea,0,,,,,0,,,120,,W 2–1,0,,,,Home,0,Fourth round proper,Plymouth Argyle,0
+,,,,,Sat,,Premier League,,,,,,,2022-02-19,,,N,Chelsea,,,,,,,,,,,W 1–0,,"On matchday squad, but did not play",,,Away,,Matchweek 26,Crystal Palace,
+,,,,,Tue,,Champions Lg,,,,,,,2022-02-22,,,N,Chelsea,,,,,,,,,,,W 2–0,,"On matchday squad, but did not play",,,Home,,Round of 16,Lille,
+0,,,0,,Sun,,EFL Cup,0,,,,,,2022-02-27,0,,N,Chelsea,0,,,,,0,,,1,,D 0 ,0,,,,Home,0,Final,Liverpool,0
+0,,,0,,Wed,,FA Cup,0,,,,GK,,2022-03-02,0,,Y,Chelsea,0,,,,,0,,,90,,W 3–2,0,,,,Away,0,Fifth round proper,Luton Town,0
+,,,,,Sat,,Premier League,,,,,,,2022-03-05,,,N,Chelsea,,,,,,,,,,,W 4–0,,"On matchday squad, but did not play",,,Away,,Matchweek 28,Burnley,
+,,,,,Thu,,Premier League,,,,,,,2022-03-10,,,N,Chelsea,,,,,,,,,,,W 3–1,,"On matchday squad, but did not play",,,Away,,Matchweek 30,Norwich City,
+,,,,,Sun,,Premier League,,,,,,,2022-03-13,,,N,Chelsea,,,,,,,,,,,W 1–0,,"On matchday squad, but did not play",,,Home,,Matchweek 29,Newcastle Utd,
+,,,,,Wed,,Champions Lg,,,,,,,2022-03-16,,,N,Chelsea,,,,,,,,,,,W 2–1,,"On matchday squad, but did not play",,,Away,,Round of 16,Lille,
+,,,,,Sat,,Premier League,,,,,,,2022-04-02,,,N,Chelsea,,,,,,,,,,,L 1–4,,"On matchday squad, but did not play",,,Home,,Matchweek 31,Brentford,
+,,,,,Wed,,Champions Lg,,,,,,,2022-04-06,,,N,Chelsea,,,,,,,,,,,L 1–3,,"On matchday squad, but did not play",,,Home,,Quarter-finals,Real Madrid,
+,,,,,Sat,,Premier League,,,,,,,2022-04-09,,,N,Chelsea,,,,,,,,,,,W 6–0,,"On matchday squad, but did not play",,,Away,,Matchweek 32,Southampton,
+,,,,,Tue,,Champions Lg,,,,,,,2022-04-12,,,N,Chelsea,,,,,,,,,,,W 3–2,,"On matchday squad, but did not play",,,Away,,Quarter-finals,Real Madrid,
+,,,,,Sun,,FA Cup,,,,,,,2022-04-17,,,N,Chelsea,,,,,,,,,,,W 2–0,,"On matchday squad, but did not play",,,Home,,Semi-finals,Crystal Palace,
+,,,,,Wed,,Premier League,,,,,,,2022-04-20,,,N,Chelsea,,,,,,,,,,,L 2–4,,"On matchday squad, but did not play",,,Home,,Matchweek 25,Arsenal,
+,,,,,Sun,,Premier League,,,,,,,2022-04-24,,,N,Chelsea,,,,,,,,,,,W 1–0,,"On matchday squad, but did not play",,,Home,,Matchweek 34,West Ham,
+,,,,,Thu,,Premier League,,,,,,,2022-04-28,,,N,Chelsea,,,,,,,,,,,D 1–1,,"On matchday squad, but did not play",,,Away,,Matchweek 37,Manchester Utd,
+,,,,,Sun,,Premier League,,,,,,,2022-05-01,,,N,Chelsea,,,,,,,,,,,L 0–1,,"On matchday squad, but did not play",,,Away,,Matchweek 35,Everton,
+,,,,,Sat,,Premier League,,,,,,,2022-05-07,,,N,Chelsea,,,,,,,,,,,D 2–2,,"On matchday squad, but did not play",,,Home,,Matchweek 36,Wolves,
+,,,,,Wed,,Premier League,,,,,,,2022-05-11,,,N,Chelsea,,,,,,,,,,,W 3–0,,"On matchday squad, but did not play",,,Away,,Matchweek 33,Leeds United,
+,,,,,Sat,,FA Cup,,,,,,,2022-05-14,,,N,Chelsea,,,,,,,,,,,D 0 ,,"On matchday squad, but did not play",,,Home,,Final,Liverpool,
+,,,,,Thu,,Premier League,,,,,,,2022-05-19,,,N,Chelsea,,,,,,,,,,,D 1–1,,"On matchday squad, but did not play",,,Home,,Matchweek 27,Leicester City,
+,,,,,Sun,,Premier League,,,,,,,2022-05-22,,,N,Chelsea,,,,,,,,,,,W 2–1,,"On matchday squad, but did not play",,,Home,,Matchweek 38,Watford,

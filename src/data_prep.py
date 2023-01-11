@@ -1,15 +1,15 @@
 from numpy import NaN
 from pandas import concat
 from soupsieve import select
-from getters import *
-from understat import *
-from mergers import *
-from cleaners import *
-from commons import *
+from vaastav.getters import *
+from vaastav.understat import *
+from vaastav.mergers import *
+from vaastav.cleaners import *
+from models.commons import *
 from statistics import *
-import numpy as np
 
-import match_names as mn
+import numpy as np
+from src import match_names as mn
 
 
 def find_fpl_name(player):
