@@ -99,3 +99,86 @@ names = {
     'Darwin Núñez': 'Darwin Núñez',
     'Ivan Perisic': 'Ivan Perišić'
 }
+
+def neutralize_name(name):
+    return name.replace(" ", "-").replace("ï", "i").replace("é", "e").replace("á", "a").replace("ó", "o").replace("Á", "A").replace("ø", "o").replace("ć", "c").replace("í", "i").replace("ú", "u").replace("Ć", "C").replace("ã", "a").replace("ğ", "g").replace("ş", "s").replace("É", "E").replace("ñ", "n").replace("Ł", "L").replace("ń", "n").replace("ß", "ss").replace("ç", "c").replace("İ", "I").replace("č", "c").replace("ö", "o").replace("ë", "e").replace("š", "s").replace("ä", "a").replace("Ç", "C").replace("ü", "u").replace("Ø", "O").replace("ú", "u").replace("ú", "u")
+
+
+
+def name_fbref_to_fpl(name):
+    # input name should be after neutralizing
+    output = name
+    if name == "Thiago-Alcantara":
+        output = "Thiago-Alcantara-do-Nascimento"
+    if name == "Alisson":
+        output = "Alisson-Ramses-Becker"
+    if name == "Miguel-Almiron":
+        output = "Miguel-Almiron"
+    if name == "Antony":
+        output = "Antony-Matheus-dos-Santos"
+    if name == "Joe-Aribo":
+        output = "Joe-Ayodele-Aribo"
+    if name == "Bryan":
+        output = "Bryan-Gil-Salvatierra"
+    if name == "Thiago-Alcantara":
+        output = "Thiago-Alcantara-do-Nascimento"
+    if name == "Ederson":
+        output = "Ederson-Santana-de-Moraes"
+    if name == "Emi-Buendia":
+        output = "Emiliano-Buendia-Stati"
+    if name == "Moises-Caicedo":
+        output = "Moises-Caicedo-Corozo"
+    if name == "Fabio-Carvalho":
+        output = "Fabio-Freitas-Gouveia-Carvalho"
+    if name == "Casemiro":
+        output = "Carlos-Henrique-Casimiro"
+    if name == "Marc-Cucurella":
+        output = "Marc-Cucurella-Saseta"
+    if name == "Diogo-Dalot":
+        output = "Diogo-Dalot-Teixeira"
+    if name == "Ruben-Dias":
+        output = "Ruben-Gato-Alves-Dias"
+    if name == "Bruno-Fernandes":
+        output = "Bruno-Borges-Fernandes"
+    if name == "Gabriel-Jesus":
+        output = "Gabriel Fernando de Jesus"
+    if name == "Hugo-Bueno":
+        output = "Hugo Bueno Lopez"
+    if name == "Jonny-Castro":
+        output = "Jonathan Castro Otto"
+    if name == "Bruno-Guimaraes":
+        output = "Bruno Guimarães Rodriguez Moura"
+    if name == "Pierre-Hojbjerg":
+        output = "Pierre-Emile Højbjerg"
+    if name == "Joelinton":
+        output = "Joelinton Cássio Apolinário de Lira"
+    if name == "Martinelli":
+        output = "Gabriel Teodoro Martinelli Silva"
+    if name == "Darwin-Nunez":
+        output = "Thiago-Alcantara-do-Nascimento"
+    if name == "Andreas-Pereira":
+        output = "Andreas-Hoelgebaum-Pereira"
+    if name == "Richarlison":
+        output = "Richarlison de Andrade"
+    if name == "Bernardo-Silva":
+        output = "Bernardo-Mota-Veiga-de-Carvalho-e-Silva"
+    if name == "Kostas-Tsimikas":
+        output = "Konstantinos Tsimikas"
+    if name == "Ben-White":
+        output = "Benjamin White"
+    if name == "Thiago-Alcantara":
+        output = "Thiago-Alcantara-do-Nascimento"
+    if name == "Thiago-Alcantara":
+        output = "Thiago-Alcantara-do-Nascimento"
+    if name == "Thiago-Alcantara":
+        output = "Thiago-Alcantara-do-Nascimento"
+    if name == "Thiago-Alcantara":
+        output = "Thiago-Alcantara-do-Nascimento"
+    if name == "Thiago-Alcantara":
+        output = "Thiago-Alcantara-do-Nascimento"
+    if name == "Thiago-Alcantara":
+        output = "Thiago-Alcantara-do-Nascimento"
+    if name == "Thiago-Alcantara":
+        output = "Thiago-Alcantara-do-Nascimento"
+    
+    return neutralize_name(output)
