@@ -152,8 +152,6 @@ def name_fbref_to_fpl(name):
         output = "Pierre-Emile Højbjerg"
     if name == "Joelinton":
         output = "Joelinton Cássio Apolinário de Lira"
-    if name == "Martinelli":
-        output = "Gabriel Teodoro Martinelli Silva"
     if name == "Darwin-Nunez":
         output = "Thiago-Alcantara-do-Nascimento"
     if name == "Andreas-Pereira":
@@ -166,6 +164,102 @@ def name_fbref_to_fpl(name):
         output = "Konstantinos Tsimikas"
     if name == "Ben-White":
         output = "Benjamin White"
+    if name == "Sergi-Canos":
+        output = "Sergi Canós Tenés"
+    if name == "Julio-Cesar-Enciso":
+        output = "Julio Enciso"
+    if name == "Diego-Costa":
+        output = "Diego Da Silva Costa"
+    if name == "Philippe-Coutinho":
+        output = "Philippe Coutinho Correia"
+    if name == "Gabriel-Dos-Santos":
+        output = "Gabriel dos Santos Magalhães"
+    if name == "Emerson":
+        output = "Emerson Leite de Souza Junior"
+    if name == "Fabinho":
+        output = "Fabio Henrique Tavares"
+    if name == "Junior-Firpo":
+        output = "Junior Firpo Adames"
+    if name == "Pablo-Fornals":
+        output = "Pablo Fornals Malla"
+    if name == "Fred":
+        output = "Frederico Rodrigues de Paula Santos"
+    if name == "Idrissa-Gana-Gueye":
+        output = "Idrissa Gueye"
+    if name == "David-de-Gea":
+        output = "David De Gea Quintana"
+    if name == "Degnand-Gnonto":
+        output = "Wilfried Gnonto"
+    if name == "Toti-Gomes":
+        output = "Toti António Gomes"
+    if name == "Joe-Gomez":
+        output = "Joseph Gomez"
+    if name == "Jorginho":
+        output = "Jorge Luiz Frello Filho"
+    if name == "Diogo-Jota":
+        output = "Diogo Teixeira da Silva"
+    if name == "Ezri-Konsa":
+        output = "Ezri Konsa Ngoyo"
+    if name == "Juan-Larios":
+        output = "Juan Larios López"
+    if name == "Jefferson-Lerma":
+        output = "Jefferson Lerma Solís"
+    if name == "Renan-Lodi":
+        output = "Renan Augusto Lodi dos Santos"
+    if name == "Douglas-Luiz":
+        output = "Douglas Luiz Soares de Paulo"
+    if name == "Lyanco":
+        output = "Lyanco Silveira Neves Vojnovic"
+    if name == "Javier-Manquillo":
+        output = "Javier Manquillo Gaitán"
+    if name == "Marquinhos":
+        output = "Marcus Oliveira Alencar"
+    if name == "Emiliano-Martinez":
+        output = "Emiliano Martínez Romero"
+    if name == "Lucas-Moura":
+        output = "Lucas Rodrigues Moura da Silva"
+    if name == "Joao-Moutinho":
+        output = "João Filipe Iria Santos Moutinho"
+    if name == "Vitaliy-Mykolenko":
+        output = "Vitalii Mykolenko"
+    if name == "Neto":
+        output = "Norberto Murara Neto"
+    if name == "Pedro-Neto":
+        output = "Pedro Lomba Neto"
+    if name == "Ruben-Neves":
+        output = "Rúben da Silva Neves"
+    if name == "Matheus-Nunes":
+        output = "Matheus Luiz Nunes"
+    if name == "Joao-Palhinha":
+        output = "João Palhinha Gonçalves"
+    if name == "Emerson-Palmieri":
+        output = "Emerson Palmieri dos Santos"
+    if name == "Lucas-Paqueta":
+        output = "Lucas Tolentino Coelho de Lima"
+    if name == "Daniel-Podence":
+        output = "Daniel Castelo Podence"
+    if name == "David-Raya":
+        output = "David Raya Martin"
+    if name == "Marc-Roca":
+        output = "Marc Roca Junqué"
+    if name == "Rodri":
+        output = "Rodrigo Hernandez"
+    if name == "Mads-Roerslev":
+        output = "Mads Roerslev Rasmussen"
+    if name == "Jose-Sa":
+        output = "José Malheiro de Sá"
+    if name == "Jeremy-Sarmiento":
+        output = "Jeremy Sarmiento Morante"
+    if name == "Luis-Sinisterra":
+        output = "Luis Sinisterra Lucumí"
+    if name == "Fabio-Vieira":
+        output = "Fábio Ferreira Vieira"
+    if name == "Ruben-Vinagre":
+        output = "Rúben Nascimento Vinagre"
+    if name == "Carlos-Vinicius":
+        output = "Carlos Vinícius Alves Morais"
+    if name == "Willian":
+        output = "Willian Borges da Silva"
     if name == "Thiago-Alcantara":
         output = "Thiago-Alcantara-do-Nascimento"
     if name == "Thiago-Alcantara":
@@ -176,9 +270,6 @@ def name_fbref_to_fpl(name):
         output = "Thiago-Alcantara-do-Nascimento"
     if name == "Thiago-Alcantara":
         output = "Thiago-Alcantara-do-Nascimento"
-    if name == "Thiago-Alcantara":
-        output = "Thiago-Alcantara-do-Nascimento"
-    if name == "Thiago-Alcantara":
-        output = "Thiago-Alcantara-do-Nascimento"
+    
     
     return neutralize_name(output)
