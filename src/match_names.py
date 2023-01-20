@@ -113,7 +113,7 @@ def name_fbref_to_fpl(name):
     if name == "Alisson":
         output = "Alisson-Ramses-Becker"
     if name == "Miguel-Almiron":
-        output = "Miguel-Almiron"
+        output = "Miguel Almirón Rejala"
     if name == "Antony":
         output = "Antony-Matheus-dos-Santos"
     if name == "Joe-Aribo":
@@ -158,8 +158,10 @@ def name_fbref_to_fpl(name):
         output = "Andreas-Hoelgebaum-Pereira"
     if name == "Richarlison":
         output = "Richarlison de Andrade"
+    if name == "Martinelli":
+        output = "Gabriel Martinelli Silva"    
     if name == "Bernardo-Silva":
-        output = "Bernardo-Mota-Veiga-de-Carvalho-e-Silva"
+        output = "Bernardo Veiga de Carvalho e Silva"
     if name == "Kostas-Tsimikas":
         output = "Konstantinos Tsimikas"
     if name == "Ben-White":
@@ -260,14 +262,14 @@ def name_fbref_to_fpl(name):
         output = "Carlos Vinícius Alves Morais"
     if name == "Willian":
         output = "Willian Borges da Silva"
-    if name == "Thiago-Alcantara":
-        output = "Thiago-Alcantara-do-Nascimento"
-    if name == "Thiago-Alcantara":
-        output = "Thiago-Alcantara-do-Nascimento"
-    if name == "Thiago-Alcantara":
-        output = "Thiago-Alcantara-do-Nascimento"
-    if name == "Thiago-Alcantara":
-        output = "Thiago-Alcantara-do-Nascimento"
+    if name == "Rodrigo":
+        output = "Rodrigo Moreno"
+    if name == "Nelson-Semedo":
+        output = "Nélson Cabral Semedo"
+    if name == "Thiago-Silva":
+        output = "Thiago Emiliano da Silva"
+    if name == "Cedric-Soares":
+        output = "Cédric Alves Soares"
     if name == "Thiago-Alcantara":
         output = "Thiago-Alcantara-do-Nascimento"
     
