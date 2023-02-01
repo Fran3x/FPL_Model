@@ -53,6 +53,7 @@ Features:
     
 - Other:
     - 'was_home'
+    
 
 
 Feature ideas:
@@ -85,3 +86,16 @@ How to update data:
 - new data folder from /vaastav
 - calling update.ipynb to merge previous_season with this_season and save it to fpl_players.csv
 - merging fpl with understat using data_prep.py
+
+
+
+
+Order:
+- get new data from vaastav
+- move cleaned_merged_seasons.csv to /data
+- update.ipynb
+- fbref_scrape.ipynb to get all fbref data
+- merge_FPL_fbref.ipynb
+- assign_team_to_df.ipynb
+- LSTM_test.ipynb
+- XGBoost_predictions.ipynb

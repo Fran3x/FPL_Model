@@ -96,5 +96,6 @@ Order:
 - update.ipynb
 - fbref_scrape.ipynb to get all fbref data
 - merge_FPL_fbref.ipynb
+- assign_team_to_df.ipynb
 - LSTM_test.ipynb
 - XGBoost_predictions.ipynb
