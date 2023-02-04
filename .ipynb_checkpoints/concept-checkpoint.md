@@ -97,5 +97,16 @@ Order:
 - fbref_scrape.ipynb to get all fbref data
 - merge_FPL_fbref.ipynb
 - assign_team_to_df.ipynb
+- adding_features.ipynb
 - LSTM_test.ipynb
 - XGBoost_predictions.ipynb
+
+
+File order:
+- cleaned_merged_seasons.csv
+- logs_all.csv
+- logs_features.csv (additional files, not used later)
+- fpl_players.csv
+- fpl_fbref_players.csv (2 previous files merged)
+- fpl_fbref_elo_players.csv
+- fpl_fbref_elo_lstm.csv
