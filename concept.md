@@ -93,6 +93,7 @@ How to update data:
 Order:
 - get new data from vaastav
 - move cleaned_merged_seasons.csv to /data
+- move data/2022-23 folder from /vaastav to /data
 - update.ipynb
 - fbref_scrape.ipynb to get all fbref data
 - merge_FPL_fbref.ipynb
