@@ -111,3 +111,10 @@ File order:
 - fpl_fbref_players.csv (2 previous files merged)
 - fpl_fbref_elo_players.csv
 - fpl_fbref_elo_lstm.csv
+
+
+Other ideas:
+- scaling, normalizing input data
+- extending data to previous seasons
+- merging predictions with original dataframe
+- one notebook to rule them all
