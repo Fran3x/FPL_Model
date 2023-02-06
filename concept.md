@@ -118,3 +118,6 @@ Other ideas:
 - extending data to previous seasons
 - merging predictions with original dataframe
 - one notebook to rule them all
+- filling with zeros all fixtures when player did not attend
+- trying out transformers
+- validation set
