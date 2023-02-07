@@ -121,3 +121,4 @@ Other ideas:
 - filling with zeros all fixtures when player did not attend
 - trying out transformers
 - validation set
+- saving best model
