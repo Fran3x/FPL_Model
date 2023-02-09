@@ -1,21 +1,21 @@
-,Name,GW,Opponent,Was Home,Total Points,Points
-391,Alphonse-Areola,21,Everton,1.0,0.0,3.13
-675,Gavin-Bazunu,21,Aston Villa,1.0,3.0,3.12
-4000,Hugo-Lloris,21,Fulham,0.0,9.0,3.1
-2806,Vicente-Guaita,21,Newcastle Utd,1.0,10.0,3.1
-2047,Ederson,21,Wolves,1.0,6.0,3.09
-5725,Marek-Rodak,21,Tottenham,1.0,0.0,3.08
-5351,Jordan-Pickford,21,West Ham,0.0,1.0,3.08
-2558,David-de-Gea,21,Arsenal,0.0,1.0,3.08
-5516,David-Raya,21,Leeds United,0.0,10.0,3.07
-7030,Danny-Ward,21,Brighton,1.0,1.0,3.07
-2409,Fraser-Forster,21,Fulham,0.0,0.0,3.07
-4603,Illan-Meslier,21,Brentford,1.0,6.0,3.06
-5403,Nick-Pope,21,Crystal Palace,0.0,6.0,3.06
-731,Asmir-Begovic,21,West Ham,0.0,0.0,3.05
-3052,Wayne-Hennessey,21,Bournemouth,0.0,2.0,3.03
-3862,Bernd-Leno,21,Tottenham,1.0,2.0,3.03
-2252,Lukasz-Fabianski,21,Everton,1.0,6.0,3.03
-5863,Jose-Sa,21,Manchester City,0.0,2.0,3.02
-467,Kepa-Arrizabalaga,21,Liverpool,0.0,9.0,3.01
-5066,Robin-Olsen,21,Southampton,0.0,0.0,3.0
+,Date,Day,Comp,Round,Venue,Squad,Opponent,Start,Pos,Min,Gls,Ast,PK,PKatt,Sh,SoT,CrdY,CrdR,Touches,Tkl,Int,Blocks,xG,npxG,xAG,SCA,GCA,Cmp,Att,Cmp%,PrgP,Carries,PrgC,Att.1,Succ,Match Report,Name,Season,WDL,GoalsTeams,Team Score,Opp Score,CS,Was Home,GW,FPL,neutral_name,Total Points,FPL position,Opp rating,ScoreForLast5,ScoreAgainstLast5,Points
+391,2023-01-21,Sat,Premier League,Matchweek 21,Home,West Ham,Everton,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Alphonse-Areola,2022-23,W,2–0,2,0,1.0,1.0,21,2.0,Alphonse-Areola,0.0,GK,1675.31408691,0.8,2.2,3.14
+2409,2023-01-23,Mon,Premier League,Matchweek 21,Away,Tottenham,Fulham,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Fraser-Forster,2022-23,W,1–0,1,0,1.0,0.0,21,2.0,Fraser-Forster,0.0,GK,1722.54211426,1.6,2.0,3.14
+731,2023-01-21,Sat,Premier League,Matchweek 21,Away,Everton,West Ham,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Asmir-Begovic,2022-23,L,0–2,0,2,0.0,0.0,21,1.0,Asmir-Begovic,0.0,GK,1740.45349121,0.8,2.4,3.13
+5516,2023-01-22,Sun,Premier League,Matchweek 21,Away,Brentford,Leeds United,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,52.0,0.0,0.0,0.0,0.0,0.0,0.1,1.0,0.0,29.0,50.0,58.0,0.0,31.0,0.0,0.0,0.0,Match Report,David-Raya,2022-23,D,0–0,0,0,1.0,0.0,21,3.0,David-Raya,10.0,GK,1707.01049805,2.2,0.8,3.12
+7030,2023-01-21,Sat,Premier League,Matchweek 21,Home,Leicester City,Brighton,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,34.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,25.0,32.0,78.1,0.0,17.0,0.0,0.0,0.0,Match Report,Danny-Ward,2022-23,D,2–2,2,2,0.0,1.0,21,2.0,Danny-Ward,1.0,GK,1823.63244629,0.6,1.6,3.1
+5066,2023-01-21,Sat,Premier League,Matchweek 21,Away,Aston Villa,Southampton,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Robin-Olsen,2022-23,W,1–0,1,0,1.0,0.0,21,2.0,Robin-Olsen,0.0,GK,1658.23925781,1.6,1.2,3.09
+5403,2023-01-21,Sat,Premier League,Matchweek 21,Away,Newcastle Utd,Crystal Palace,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,25.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,22.0,24.0,91.7,0.0,17.0,0.0,0.0,0.0,Match Report,Nick-Pope,2022-23,D,0–0,0,0,1.0,0.0,21,3.0,Nick-Pope,6.0,GK,1740.1394043,1.0,0.0,3.08
+6761,2023-01-21,Sat,Premier League,Matchweek 21,Home,Bournemouth,Nott'ham Forest,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Mark-Travers,2022-23,D,1–1,1,1,0.0,1.0,21,1.0,Mark-Travers,0.0,GK,1655.13061523,0.6,1.8,3.07
+4603,2023-01-22,Sun,Premier League,Matchweek 21,Home,Leeds United,Brentford,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,13.0,23.0,56.5,0.0,9.0,0.0,0.0,0.0,Match Report,Illan-Meslier,2022-23,D,0–0,0,0,1.0,1.0,21,3.0,Illan-Meslier,6.0,GK,1780.16015625,1.4,2.2,3.06
+4000,2023-01-23,Mon,Premier League,Matchweek 21,Away,Tottenham,Fulham,Y*,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,20.0,26.0,76.9,0.0,15.0,0.0,0.0,0.0,Match Report,Hugo-Lloris,2022-23,W,1–0,1,0,1.0,0.0,21,3.0,Hugo-Lloris,9.0,GK,1722.54211426,1.6,2.0,3.05
+2047,2023-01-22,Sun,Premier League,Matchweek 21,Home,Manchester City,Wolves,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,36.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,29.0,36.0,80.6,0.0,29.0,0.0,0.0,0.0,Match Report,Ederson,2022-23,W,3–0,3,0,1.0,1.0,21,3.0,Ederson,6.0,GK,1698.20385742,2.0,1.2,3.04
+4335,2023-01-21,Sat,Premier League,Matchweek 21,Away,Aston Villa,Southampton,Y*,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,53.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,41.0,48.0,85.4,0.0,35.0,0.0,0.0,0.0,Match Report,Emiliano-Martinez,2022-23,W,1–0,1,0,1.0,0.0,21,3.0,Emiliano-Martinez,10.0,GK,1658.23925781,2.0,0.8,3.03
+2252,2023-01-21,Sat,Premier League,Matchweek 21,Home,West Ham,Everton,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7.0,15.0,46.7,0.0,7.0,0.0,0.0,0.0,Match Report,Lukasz-Fabianski,2022-23,W,2–0,2,0,1.0,1.0,21,3.0,Lukasz-Fabianski,6.0,GK,1675.31408691,0.6,2.0,3.03
+5863,2023-01-22,Sun,Premier League,Matchweek 21,Away,Wolves,Manchester City,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,49.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,36.0,45.0,80.0,0.0,26.0,0.0,0.0,0.0,Match Report,Jose-Sa,2022-23,L,0–3,0,3,0.0,0.0,21,2.0,Jose-Sa,2.0,GK,2023.6887207,0.8,1.0,3.03
+6011,2023-01-21,Sat,Premier League,Matchweek 21,Away,Brighton,Leicester City,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,15.0,18.0,83.3,0.0,17.0,0.0,0.0,0.0,Match Report,Robert-Sanchez,2022-23,D,2–2,2,2,0.0,0.0,21,2.0,Robert-Sanchez,1.0,GK,1745.29675293,2.6,1.6,3.03
+467,2023-01-21,Sat,Premier League,Matchweek 21,Away,Chelsea,Liverpool,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,46.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,41.0,45.0,91.1,0.0,26.0,0.0,0.0,0.0,Match Report,Kepa-Arrizabalaga,2022-23,D,0–0,0,0,1.0,0.0,21,3.0,Kepa-Arrizabalaga,9.0,GK,1967.20385742,1.0,0.8,3.03
+2806,2023-01-21,Sat,Premier League,Matchweek 21,Home,Crystal Palace,Newcastle Utd,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,35.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,19.0,34.0,55.9,0.0,20.0,0.0,0.0,0.0,Match Report,Vicente-Guaita,2022-23,D,0–0,0,0,1.0,1.0,21,3.0,Vicente-Guaita,10.0,GK,1857.70043945,0.6,1.8,3.02
+214,2023-01-21,Sat,Premier League,Matchweek 21,Home,Liverpool,Chelsea,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,54.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,47.0,52.0,90.4,0.0,32.0,0.0,0.0,0.0,Match Report,Alisson,2022-23,D,0–0,0,0,1.0,1.0,21,3.0,Alisson,9.0,GK,1867.05236816,1.8,1.8,3.02
+5459,2023-01-22,Sun,Premier League,Matchweek 21,Home,Arsenal,Manchester Utd,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,29.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,17.0,26.0,65.4,1.0,17.0,0.0,0.0,0.0,Match Report,Aaron-Ramsdale,2022-23,W,3–2,3,2,0.0,1.0,21,2.0,Aaron-Ramsdale,1.0,GK,1872.48657227,2.2,0.6,3.0
+675,2023-01-21,Sat,Premier League,Matchweek 21,Home,Southampton,Aston Villa,Y,GK,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,28.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,15.0,27.0,55.6,0.0,15.0,0.0,0.0,0.0,Match Report,Gavin-Bazunu,2022-23,L,0–1,0,1,0.0,1.0,21,2.0,Gavin-Bazunu,3.0,GK,1760.30419922,1.0,2.0,3.0

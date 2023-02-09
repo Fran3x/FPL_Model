@@ -1,21 +1,21 @@
-,Name,GW,Opponent,Was Home,Total Points,Points
-4143,Harry-Maguire,21,Arsenal,0.0,0.0,2.38
-6189,Luke-Shaw,21,Arsenal,0.0,0.0,2.38
-959,Hugo-Bueno,21,Manchester City,0.0,1.0,2.38
-6234,Thiago-Silva,21,Liverpool,0.0,6.0,2.38
-6462,John-Stones,21,Wolves,1.0,8.0,2.37
-2842,Marc-Guehi,21,Newcastle Utd,1.0,5.0,2.37
-4584,Chris-Mepham,21,Nott'ham Forest,1.0,0.0,2.37
-1547,Marc-Cucurella,21,Liverpool,0.0,6.0,2.37
-1430,Steve-Cook,21,Bournemouth,0.0,0.0,2.37
-6150,Marcos-Senesi,21,Nott'ham Forest,1.0,0.0,2.37
-1228,Trevoh-Chalobah,21,Liverpool,0.0,5.0,2.37
-1360,Seamus-Coleman,21,West Ham,0.0,0.0,2.37
-1145,Matty-Cash,21,Southampton,0.0,1.0,2.37
-7050,Joel-Ward,21,Newcastle Utd,1.0,6.0,2.37
-7163,Neco-Williams,21,Bournemouth,0.0,1.0,2.37
-3071,Rico-Henry,21,Leeds United,0.0,6.0,2.37
-6943,Ruben-Vinagre,21,West Ham,0.0,0.0,2.37
-1183,Jonny-Castro,21,Manchester City,0.0,0.0,2.36
-3663,Kalidou-Koulibaly,21,Liverpool,0.0,0.0,2.36
-3913,Rico-Lewis,21,Wolves,1.0,1.0,2.36
+,Date,Day,Comp,Round,Venue,Squad,Opponent,Start,Pos,Min,Gls,Ast,PK,PKatt,Sh,SoT,CrdY,CrdR,Touches,Tkl,Int,Blocks,xG,npxG,xAG,SCA,GCA,Cmp,Att,Cmp%,PrgP,Carries,PrgC,Att.1,Succ,Match Report,Name,Season,WDL,GoalsTeams,Team Score,Opp Score,CS,Was Home,GW,FPL,neutral_name,Total Points,FPL position,Opp rating,ScoreForLast5,ScoreAgainstLast5,Points
+4537,2023-01-22,Sun,Premier League,Matchweek 21,Away,Brentford,Leeds United,Y,CB,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,72.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,43.0,68.0,63.2,4.0,23.0,0.0,1.0,1.0,Match Report,Ben-Mee,2022-23,D,0–0,0,0,1.0,0.0,21,3.0,Ben-Mee,6.0,DEF,1707.01049805,2.2,0.8,2.38
+6684,2023-01-22,Sun,Premier League,Matchweek 21,Home,Arsenal,Manchester Utd,N,RB,45.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,47.0,4.0,1.0,1.0,0.0,0.0,0.5,2.0,1.0,29.0,36.0,80.6,3.0,24.0,2.0,1.0,0.0,Match Report,Takehiro-Tomiyasu,2022-23,W,3–2,3,2,0.0,1.0,21,4.0,Takehiro-Tomiyasu,4.0,DEF,1872.48657227,2.4,0.6,2.38
+2010,2023-01-21,Sat,Premier League,Matchweek 21,Away,Brighton,Leicester City,Y*,CB,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,165.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,142.0,156.0,91.0,15.0,137.0,4.0,0.0,0.0,Match Report,Lewis-Dunk,2022-23,D,2–2,2,2,0.0,0.0,21,2.0,Lewis-Dunk,1.0,DEF,1745.29675293,2.6,1.6,2.38
+6234,2023-01-21,Sat,Premier League,Matchweek 21,Away,Chelsea,Liverpool,Y,CB,90.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,108.0,1.0,2.0,3.0,0.4,0.4,0.0,1.0,0.0,83.0,92.0,90.2,2.0,66.0,0.0,0.0,0.0,Match Report,Thiago-Silva,2022-23,D,0–0,0,0,1.0,0.0,21,3.0,Thiago-Silva,6.0,DEF,1967.20385742,1.0,0.8,2.38
+1312,2023-01-21,Sat,Premier League,Matchweek 21,Home,Crystal Palace,Newcastle Utd,N,RB,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0,8.0,75.0,0.0,2.0,0.0,0.0,0.0,Match Report,Nathaniel-Clyne,2022-23,D,0–0,0,0,1.0,1.0,21,2.0,Nathaniel-Clyne,1.0,DEF,1857.70043945,0.6,1.8,2.38
+1228,2023-01-21,Sat,Premier League,Matchweek 21,Away,Chelsea,Liverpool,Y,"CB,RB",80.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,61.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,47.0,51.0,92.2,0.0,36.0,1.0,1.0,0.0,Match Report,Trevoh-Chalobah,2022-23,D,0–0,0,0,1.0,0.0,21,3.0,Trevoh-Chalobah,5.0,DEF,1967.20385742,1.0,0.8,2.37
+142,2023-01-22,Sun,Premier League,Matchweek 21,Home,Manchester City,Wolves,N,LB,45.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,41.0,0.0,2.0,1.0,0.0,0.0,0.0,1.0,1.0,28.0,32.0,87.5,3.0,26.0,0.0,0.0,0.0,Match Report,Nathan-Ake,2022-23,W,3–0,3,0,1.0,1.0,21,2.0,Nathan-Ake,1.0,DEF,1698.20385742,2.0,1.2,2.37
+3646,2023-01-21,Sat,Premier League,Matchweek 21,Away,Aston Villa,Southampton,Y,CB,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,59.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,55.0,59.0,93.2,1.0,46.0,0.0,0.0,0.0,Match Report,Ezri-Konsa,2022-23,W,1–0,1,0,1.0,0.0,21,3.0,Ezri-Konsa,7.0,DEF,1658.23925781,1.6,1.2,2.37
+1078,2023-01-22,Sun,Premier League,Matchweek 21,Home,Manchester City,Wolves,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Joao-Cancelo,2022-23,W,3–0,3,0,1.0,1.0,21,2.0,Joao-Cancelo,0.0,DEF,1698.20385742,2.0,1.2,2.37
+6943,2023-01-21,Sat,Premier League,Matchweek 21,Away,Everton,West Ham,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Ruben-Vinagre,2022-23,L,0–2,0,2,0.0,0.0,21,1.0,Ruben-Vinagre,0.0,DEF,1740.45349121,0.6,2.0,2.37
+1183,2023-01-22,Sun,Premier League,Matchweek 21,Away,Wolves,Manchester City,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Jonny-Castro,2022-23,L,0–3,0,3,0.0,0.0,21,1.0,Jonny-Castro,0.0,DEF,2023.6887207,1.0,1.2,2.37
+76,2023-01-23,Mon,Premier League,Matchweek 21,Home,Fulham,Tottenham,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Tosin-Adarabioyo,2022-23,L,0–1,0,1,0.0,1.0,21,1.0,Tosin-Adarabioyo,0.0,DEF,1853.42712402,1.6,0.6,2.36
+1640,2023-01-23,Mon,Premier League,Matchweek 21,Away,Tottenham,Fulham,Y,CB,90.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,57.0,0.0,0.0,1.0,0.1,0.1,0.4,1.0,0.0,38.0,47.0,80.9,1.0,41.0,0.0,0.0,0.0,Match Report,Ben-Davies,2022-23,W,1–0,1,0,1.0,0.0,21,3.0,Ben-Davies,7.0,DEF,1722.54211426,1.6,2.0,2.36
+1821,2023-01-23,Mon,Premier League,Matchweek 21,Away,Tottenham,Fulham,Y,CB,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,60.0,4.0,0.0,1.0,0.0,0.0,0.1,2.0,0.0,41.0,47.0,87.2,3.0,27.0,0.0,0.0,0.0,Match Report,Eric-Dier,2022-23,W,1–0,1,0,1.0,0.0,21,3.0,Eric-Dier,6.0,DEF,1722.54211426,1.6,2.0,2.36
+1855,2023-01-23,Mon,Premier League,Matchweek 21,Home,Fulham,Tottenham,Y,CB,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,74.0,2.0,3.0,1.0,0.0,0.0,0.0,1.0,0.0,57.0,66.0,86.4,4.0,39.0,0.0,0.0,0.0,Match Report,Issa-Diop,2022-23,L,0–1,0,1,0.0,1.0,21,2.0,Issa-Diop,2.0,DEF,1853.42712402,1.6,0.6,2.36
+1528,2023-01-21,Sat,Premier League,Matchweek 21,Home,West Ham,Everton,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Aaron-Cresswell,2022-23,W,2–0,2,0,1.0,1.0,21,2.0,Aaron-Cresswell,0.0,DEF,1675.31408691,0.6,2.0,2.36
+6131,2023-01-22,Sun,Premier League,Matchweek 21,Away,Wolves,Manchester City,Y,RB,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,65.0,3.0,2.0,5.0,0.0,0.0,0.0,0.0,0.0,36.0,44.0,81.8,3.0,35.0,0.0,2.0,1.0,Match Report,Nelson-Semedo,2022-23,L,0–3,0,3,0.0,0.0,21,2.0,Nelson-Semedo,1.0,DEF,2023.6887207,0.8,1.0,2.36
+5953,2023-01-21,Sat,Premier League,Matchweek 21,Home,Southampton,Aston Villa,Y,CB,90.0,0.0,0.0,0.0,0.0,2.0,1.0,0.0,0.0,66.0,1.0,5.0,2.0,0.1,0.1,0.0,0.0,0.0,33.0,47.0,70.2,1.0,34.0,0.0,0.0,0.0,Match Report,Mohammed-Salisu,2022-23,L,0–1,0,1,0.0,1.0,21,2.0,Mohammed-Salisu,2.0,DEF,1760.30419922,1.0,2.0,2.36
+5027,2023-01-21,Sat,Premier League,Matchweek 21,Home,West Ham,Everton,Y,CB,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,50.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,30.0,33.0,90.9,0.0,24.0,0.0,0.0,0.0,Match Report,Angelo-Ogbonna,2022-23,W,2–0,2,0,1.0,1.0,21,3.0,Angelo-Ogbonna,7.0,DEF,1675.31408691,0.6,2.0,2.36
+4685,2023-01-21,Sat,Premier League,Matchweek 21,Home,Crystal Palace,Newcastle Utd,Y,LB,90.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,65.0,4.0,1.0,1.0,0.0,0.0,0.0,1.0,0.0,35.0,55.0,63.6,6.0,29.0,1.0,0.0,0.0,Match Report,Tyrick-Mitchell,2022-23,D,0–0,0,0,1.0,1.0,21,3.0,Tyrick-Mitchell,7.0,DEF,1857.70043945,0.6,1.4,2.36

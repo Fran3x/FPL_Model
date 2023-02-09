@@ -1,31 +1,31 @@
-,Name,GW,Opponent,Was Home,Total Points,Points
-4718,Aleksandar-Mitrovic,21,Tottenham,1.0,2.0,5.48
-6714,Ivan-Toney,21,Leeds United,0.0,1.0,3.36
-2967,Kai-Havertz,21,Liverpool,0.0,2.0,3.36
-3501,Harry-Kane,21,Fulham,0.0,6.0,3.36
-38,Che-Adams,21,Aston Villa,1.0,2.0,3.35
-4952,Eddie-Nketiah,21,Manchester Utd,1.0,13.0,3.3
-7089,Ollie-Watkins,21,Southampton,0.0,8.0,3.23
-7212,Callum-Wilson,21,Crystal Palace,0.0,2.0,3.22
-2904,Erling-Haaland,21,Wolves,1.0,17.0,3.21
-4443,Bryan-Mbeumo,21,Leeds United,0.0,2.0,3.13
-3401,Brennan-Johnson,21,Bournemouth,0.0,5.0,3.11
-7121,Danny-Welbeck,21,Leicester City,0.0,2.0,2.91
-256,Julian-Alvarez,21,Wolves,1.0,1.0,2.72
-6516,Sam-Surridge,21,Bournemouth,0.0,8.0,2.16
-3225,Danny-Ings,21,Everton,1.0,1.0,1.96
-431,Adam-Armstrong,21,Aston Villa,1.0,2.0,1.91
-4244,Sekou-Mara,21,Aston Villa,1.0,1.0,1.88
-6834,Deniz-Undav,21,Leicester City,0.0,0.0,1.87
-2575,Joe-Gelhardt,21,Brentford,1.0,0.0,1.86
-2066,Odsonne-Edouard,21,Newcastle Utd,1.0,2.0,1.83
-6893,Jamie-Vardy,21,Brighton,1.0,2.0,1.82
-4738,Kieffer-Moore,21,Nott'ham Forest,1.0,2.0,1.77
-4409,Neal-Maupay,21,West Ham,0.0,0.0,1.76
-1569,Patson-Daka,21,Brighton,1.0,1.0,1.75
-3205,Kelechi-Iheanacho,21,Brighton,1.0,0.0,1.74
-347,Michail-Antonio,21,Everton,1.0,5.0,1.72
-2767,Sam-Greenwood,21,Brentford,1.0,1.0,1.6
-6959,Carlos-Vinicius,21,Tottenham,1.0,1.0,1.58
-4382,Jean-Philippe-Mateta,21,Newcastle Utd,1.0,1.0,1.54
-7267,Chris-Wood,21,Bournemouth,0.0,2.0,1.52
+,Date,Day,Comp,Round,Venue,Squad,Opponent,Start,Pos,Min,Gls,Ast,PK,PKatt,Sh,SoT,CrdY,CrdR,Touches,Tkl,Int,Blocks,xG,npxG,xAG,SCA,GCA,Cmp,Att,Cmp%,PrgP,Carries,PrgC,Att.1,Succ,Match Report,Name,Season,WDL,GoalsTeams,Team Score,Opp Score,CS,Was Home,GW,FPL,neutral_name,Total Points,FPL position,Opp rating,ScoreForLast5,ScoreAgainstLast5,Points
+3501,2023-01-23,Mon,Premier League,Matchweek 21,Away,Tottenham,Fulham,Y,FW,90.0,1.0,0.0,0.0,0.0,6.0,2.0,0.0,0.0,34.0,1.0,0.0,0.0,0.7,0.7,0.0,1.0,0.0,13.0,18.0,72.2,7.0,24.0,2.0,5.0,1.0,Match Report,Harry-Kane,2022-23,W,1–0,1,0,1.0,0.0,21,8.0,Harry-Kane,6.0,FWD,1722.54211426,1.6,2.0,3.33
+6714,2023-01-22,Sun,Premier League,Matchweek 21,Away,Brentford,Leeds United,Y,FW,90.0,0.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,45.0,0.0,3.0,0.0,0.2,0.2,0.0,1.0,0.0,13.0,28.0,46.4,2.0,20.0,1.0,3.0,0.0,Match Report,Ivan-Toney,2022-23,D,0–0,0,0,1.0,0.0,21,3.0,Ivan-Toney,1.0,FWD,1707.01049805,1.8,0.8,3.31
+4718,2023-01-23,Mon,Premier League,Matchweek 21,Home,Fulham,Tottenham,Y,FW,90.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,32.0,1.0,0.0,1.0,0.1,0.1,0.0,1.0,0.0,12.0,20.0,60.0,1.0,23.0,0.0,1.0,0.0,Match Report,Aleksandar-Mitrovic,2022-23,L,0–1,0,1,0.0,1.0,21,2.0,Aleksandar-Mitrovic,2.0,FWD,1853.42712402,1.2,0.4,3.3
+4952,2023-01-22,Sun,Premier League,Matchweek 21,Home,Arsenal,Manchester Utd,Y,FW,90.0,2.0,0.0,0.0,0.0,6.0,3.0,0.0,0.0,30.0,1.0,0.0,0.0,1.9,1.9,0.0,1.0,0.0,17.0,19.0,89.5,0.0,17.0,2.0,2.0,1.0,Match Report,Eddie-Nketiah,2022-23,W,3–2,3,2,0.0,1.0,21,12.0,Eddie-Nketiah,13.0,FWD,1872.48657227,2.2,0.6,3.29
+2904,2023-01-22,Sun,Premier League,Matchweek 21,Home,Manchester City,Wolves,Y,FW,60.0,3.0,0.0,1.0,1.0,3.0,3.0,0.0,0.0,15.0,0.0,0.0,0.0,1.4,0.6,0.0,0.0,0.0,6.0,7.0,85.7,1.0,8.0,0.0,0.0,0.0,Match Report,Erling-Haaland,2022-23,W,3–0,3,0,1.0,1.0,21,18.0,Erling-Haaland,17.0,FWD,1698.20385742,2.0,1.2,3.29
+38,2023-01-21,Sat,Premier League,Matchweek 21,Home,Southampton,Aston Villa,Y,FW,60.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,7.0,14.0,50.0,0.0,11.0,0.0,0.0,0.0,Match Report,Che-Adams,2022-23,L,0–1,0,1,0.0,1.0,21,2.0,Che-Adams,2.0,FWD,1760.30419922,1.0,2.0,3.28
+2967,2023-01-21,Sat,Premier League,Matchweek 21,Away,Chelsea,Liverpool,Y,FW,80.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,28.0,0.0,3.0,1.0,0.3,0.3,0.1,1.0,0.0,10.0,17.0,58.8,1.0,12.0,2.0,0.0,0.0,Match Report,Kai-Havertz,2022-23,D,0–0,0,0,1.0,0.0,21,3.0,Kai-Havertz,2.0,FWD,1967.20385742,1.0,0.8,3.26
+4443,2023-01-22,Sun,Premier League,Matchweek 21,Away,Brentford,Leeds United,Y,FW,73.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,21.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,11.0,16.0,68.8,3.0,9.0,0.0,1.0,0.0,Match Report,Bryan-Mbeumo,2022-23,D,0–0,0,0,1.0,0.0,21,3.0,Bryan-Mbeumo,2.0,FWD,1707.01049805,2.2,0.8,3.25
+3401,2023-01-21,Sat,Premier League,Matchweek 21,Away,Nott'ham Forest,Bournemouth,Y,FW,90.0,0.0,1.0,0.0,0.0,5.0,2.0,0.0,0.0,40.0,1.0,0.0,2.0,0.3,0.3,0.9,5.0,1.0,17.0,28.0,60.7,4.0,22.0,5.0,4.0,1.0,Match Report,Brennan-Johnson,2022-23,D,1–1,1,1,0.0,0.0,21,5.0,Brennan-Johnson,5.0,FWD,1636.59411621,1.0,0.8,3.2
+7121,2023-01-21,Sat,Premier League,Matchweek 21,Away,Brighton,Leicester City,Y,FW,65.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,20.0,0.0,0.0,0.0,0.7,0.7,0.6,2.0,0.0,13.0,16.0,81.3,0.0,15.0,0.0,1.0,0.0,Match Report,Danny-Welbeck,2022-23,D,2–2,2,2,0.0,0.0,21,2.0,Danny-Welbeck,2.0,FWD,1745.29675293,1.6,1.4,3.18
+7212,2023-01-21,Sat,Premier League,Matchweek 21,Away,Newcastle Utd,Crystal Palace,Y,FW,68.0,0.0,0.0,0.0,0.0,2.0,1.0,0.0,0.0,17.0,2.0,0.0,0.0,0.1,0.1,0.0,1.0,0.0,6.0,8.0,75.0,0.0,14.0,1.0,1.0,0.0,Match Report,Callum-Wilson,2022-23,D,0–0,0,0,1.0,0.0,21,3.0,Callum-Wilson,2.0,FWD,1740.1394043,1.2,0.2,3.16
+7089,2023-01-21,Sat,Premier League,Matchweek 21,Away,Aston Villa,Southampton,Y,FW,90.0,1.0,0.0,0.0,0.0,4.0,1.0,0.0,0.0,28.0,0.0,0.0,0.0,0.5,0.5,0.0,2.0,0.0,9.0,13.0,69.2,0.0,18.0,0.0,4.0,0.0,Match Report,Ollie-Watkins,2022-23,W,1–0,1,0,1.0,0.0,21,8.0,Ollie-Watkins,8.0,FWD,1658.23925781,1.8,1.2,2.3
+3225,2023-01-21,Sat,Premier League,Matchweek 21,Home,West Ham,Everton,N,FW,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0,2.0,0.0,0.0,0.0,0.0,0.2,1.0,0.0,3.0,5.0,60.0,1.0,5.0,0.0,1.0,0.0,Match Report,Danny-Ings,2022-23,W,2–0,2,0,1.0,1.0,21,2.0,Danny-Ings,1.0,FWD,1675.31408691,1.6,1.2,2.25
+256,2023-01-22,Sun,Premier League,Matchweek 21,Home,Manchester City,Wolves,N,FW,30.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,9.0,0.0,0.0,0.0,0.2,0.2,0.0,0.0,0.0,4.0,7.0,57.1,1.0,7.0,2.0,1.0,1.0,Match Report,Julian-Alvarez,2022-23,W,3–0,3,0,1.0,1.0,21,2.0,Julian-Alvarez,1.0,FWD,1698.20385742,1.6,1.4,2.22
+4382,2023-01-21,Sat,Premier League,Matchweek 21,Home,Crystal Palace,Newcastle Utd,N,"FW,LW",26.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,8.0,0.0,0.0,0.0,0.1,0.1,0.0,0.0,0.0,3.0,4.0,75.0,0.0,0.0,0.0,0.0,0.0,Match Report,Jean-Philippe-Mateta,2022-23,D,0–0,0,0,1.0,1.0,21,2.0,Jean-Philippe-Mateta,1.0,FWD,1857.70043945,0.6,1.4,2.18
+2767,2023-01-22,Sun,Premier League,Matchweek 21,Home,Leeds United,Brentford,N,DM,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0,4.0,50.0,0.0,1.0,0.0,0.0,0.0,Match Report,Sam-Greenwood,2022-23,D,0–0,0,0,1.0,1.0,21,2.0,Sam-Greenwood,1.0,FWD,1780.16015625,1.4,2.2,2.18
+2066,2023-01-21,Sat,Premier League,Matchweek 21,Home,Crystal Palace,Newcastle Utd,Y,"FW,RW",89.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,35.0,1.0,1.0,1.0,0.1,0.1,0.0,1.0,0.0,8.0,21.0,38.1,1.0,16.0,1.0,2.0,0.0,Match Report,Odsonne-Edouard,2022-23,D,0–0,0,0,1.0,1.0,21,3.0,Odsonne-Edouard,2.0,FWD,1857.70043945,0.6,1.8,2.16
+347,2023-01-21,Sat,Premier League,Matchweek 21,Home,West Ham,Everton,Y,FW,71.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,22.0,3.0,0.0,0.0,0.1,0.1,0.5,2.0,1.0,8.0,14.0,57.1,1.0,16.0,1.0,3.0,1.0,Match Report,Michail-Antonio,2022-23,W,2–0,2,0,1.0,1.0,21,6.0,Michail-Antonio,5.0,FWD,1675.31408691,0.8,2.0,2.16
+4409,2023-01-21,Sat,Premier League,Matchweek 21,Away,Everton,West Ham,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Neal-Maupay,2022-23,L,0–2,0,2,0.0,0.0,21,1.0,Neal-Maupay,0.0,FWD,1740.45349121,0.8,2.4,2.14
+6516,2023-01-21,Sat,Premier League,Matchweek 21,Away,Nott'ham Forest,Bournemouth,N,FW,16.0,1.0,0.0,0.0,0.0,2.0,1.0,0.0,0.0,5.0,0.0,0.0,0.0,0.9,0.9,0.0,1.0,0.0,0.0,1.0,0.0,0.0,2.0,0.0,0.0,0.0,Match Report,Sam-Surridge,2022-23,D,1–1,1,1,0.0,0.0,21,6.0,Sam-Surridge,8.0,FWD,1636.59411621,1.0,0.8,2.14
+431,2023-01-21,Sat,Premier League,Matchweek 21,Home,Southampton,Aston Villa,Y,"LW,AM",83.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,17.0,1.0,1.0,0.0,0.3,0.3,0.0,0.0,0.0,7.0,11.0,63.6,0.0,7.0,1.0,0.0,0.0,Match Report,Adam-Armstrong,2022-23,L,0–1,0,1,0.0,1.0,21,2.0,Adam-Armstrong,2.0,FWD,1760.30419922,1.0,2.0,2.14
+4738,2023-01-21,Sat,Premier League,Matchweek 21,Home,Bournemouth,Nott'ham Forest,Y,FW,90.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,49.0,0.0,1.0,1.0,0.5,0.5,0.0,2.0,1.0,19.0,34.0,55.9,2.0,19.0,2.0,2.0,0.0,Match Report,Kieffer-Moore,2022-23,D,1–1,1,1,0.0,1.0,21,2.0,Kieffer-Moore,2.0,FWD,1655.13061523,0.6,1.8,2.11
+6893,2023-01-21,Sat,Premier League,Matchweek 21,Home,Leicester City,Brighton,Y,FW,85.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,21.0,1.0,0.0,2.0,0.0,0.0,0.0,1.0,0.0,3.0,10.0,30.0,1.0,8.0,1.0,0.0,0.0,Match Report,Jamie-Vardy,2022-23,D,2–2,2,2,0.0,1.0,21,2.0,Jamie-Vardy,2.0,FWD,1823.63244629,0.6,1.6,2.1
+7267,2023-01-21,Sat,Premier League,Matchweek 21,Away,Nott'ham Forest,Bournemouth,Y,FW,74.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,20.0,0.0,1.0,2.0,0.0,0.0,0.0,1.0,0.0,6.0,13.0,46.2,2.0,10.0,0.0,0.0,0.0,Match Report,Chris-Wood,2022-23,D,1–1,1,1,0.0,0.0,21,2.0,Chris-Wood,2.0,FWD,1636.59411621,1.0,0.0,2.1
+1569,2023-01-21,Sat,Premier League,Matchweek 21,Home,Leicester City,Brighton,N,FW,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,2.0,50.0,0.0,1.0,0.0,0.0,0.0,Match Report,Patson-Daka,2022-23,D,2–2,2,2,0.0,1.0,21,1.0,Patson-Daka,1.0,FWD,1823.63244629,1.0,1.4,2.09
+6834,2023-01-21,Sat,Premier League,Matchweek 21,Away,Brighton,Leicester City,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Deniz-Undav,2022-23,D,2–2,2,2,0.0,0.0,21,1.0,Deniz-Undav,0.0,FWD,1745.29675293,2.8,1.2,2.08
+4244,2023-01-21,Sat,Premier League,Matchweek 21,Home,Southampton,Aston Villa,N,FW,30.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,13.0,0.0,0.0,0.0,0.1,0.1,0.0,0.0,0.0,5.0,6.0,83.3,0.0,10.0,0.0,2.0,0.0,Match Report,Sekou-Mara,2022-23,L,0–1,0,1,0.0,1.0,21,1.0,Sekou-Mara,1.0,FWD,1760.30419922,1.0,2.0,2.06
+2575,2023-01-22,Sun,Premier League,Matchweek 21,Home,Leeds United,Brentford,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Joe-Gelhardt,2022-23,D,0–0,0,0,1.0,1.0,21,2.0,Joe-Gelhardt,0.0,FWD,1780.16015625,1.4,2.2,2.04
+6959,2023-01-23,Mon,Premier League,Matchweek 21,Home,Fulham,Tottenham,N,LW,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2.0,3.0,66.7,0.0,3.0,0.0,0.0,0.0,Match Report,Carlos-Vinicius,2022-23,L,0–1,0,1,0.0,1.0,21,1.0,Carlos-Vinicius,1.0,FWD,1853.42712402,1.6,0.6,1.99
+3205,2023-01-21,Sat,Premier League,Matchweek 21,Home,Leicester City,Brighton,N,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Match Report,Kelechi-Iheanacho,2022-23,D,2–2,2,2,0.0,1.0,21,1.0,Kelechi-Iheanacho,0.0,FWD,1823.63244629,0.6,1.6,1.95
