@@ -24,6 +24,7 @@ Lineup evaluation model:
   2. number of players from one club, e.g. 3xCity
   3. strength of the bench
   4. expected minutes of players
+- own metric focusing on correct order (Haaland > Salah)
 
 
 Features:
@@ -95,8 +96,9 @@ Order:
 - move cleaned_merged_seasons.csv to /data
 - move data/2022-23 folder from /vaastav to /data
 - update.ipynb
-- fbref_scrape.ipynb to get all fbref data
-- merge_FPL_fbref.ipynb
+- fbref_scrape.ipynb to get all fbref data (~50 mins for season)
+- merge_FPL_fbref.ipynb (~1h) albo merge_FPL_fbref_better_try.ipynb 
+- team_elo_rating.ipynb
 - assign_team_to_df.ipynb
 - adding_features.ipynb
 - LSTM_test.ipynb
