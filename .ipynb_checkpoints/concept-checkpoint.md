@@ -54,13 +54,10 @@ Features:
     
 - Other:
     - 'was_home'
-    
 
 
 Feature ideas:
 - team elo rating (percentage difference)
-
-
 
 
 Player evaluation model:
@@ -80,15 +77,10 @@ Disclaimers:
 Emerson appears twice in epl_players
 
 
-
-
-
 How to update data:
 - new data folder from /vaastav
 - calling update.ipynb to merge previous_season with this_season and save it to fpl_players.csv
 - merging fpl with understat using data_prep.py
-
-
 
 
 Order:
@@ -100,19 +92,19 @@ Order:
 - merge_FPL_fbref.ipynb (~1h) albo merge_FPL_fbref_better_try.ipynb 
 - team_elo_rating.ipynb
 - assign_team_to_df.ipynb
-- adding_features.ipynb
+- adding_features.ipynb (~15 min)
 - LSTM_test.ipynb
 - XGBoost_predictions.ipynb
 
 
 File order:
 - cleaned_merged_seasons.csv
-- logs_all.csv
+- logs_all.csv (fbRef)
 - logs_features.csv (additional files, not used later)
-- fpl_players.csv
+- fpl_players.csv (FPL)
 - fpl_fbref_players.csv (2 previous files merged)
-- fpl_fbref_elo_players.csv
-- fpl_fbref_elo_lstm.csv
+- fpl_fbref_elo_players.csv (+ team rating)
+- fpl_fbref_elo_lstm.csv (+ lstm pred)
 
 
 Other ideas:
