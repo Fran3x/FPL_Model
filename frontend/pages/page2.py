@@ -10,7 +10,7 @@ def load_image(path):
 def page2():
     # st.title("Fantasy Premier League point predictions")
     
-    NUMBER_OF_PLOTS = 2
+    NUMBER_OF_PLOTS = 3
     
     PIL_images = [load_image('D:/PulpitE/FPL_ML/plottable/predictions_plot_' + str(i) + ".png") for i in range(1, NUMBER_OF_PLOTS + 1)]
 
