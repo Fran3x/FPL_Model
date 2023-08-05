@@ -10,16 +10,16 @@ def load_image(path):
 def page2():
     # st.title("Fantasy Premier League point predictions")
 
-    PIL_image = load_image('D:/PulpitE/FPL_misc/FPL_LSTM_streamlit/frontend/pages/predictions_fwd_plottable20.png')
-    PIL_image2 = load_image('D:/PulpitE/FPL_misc/FPL_LSTM_streamlit/frontend/pages/predictions_fwd_plottable10.png')
+    PIL_image = load_image('D:/PulpitE/FPL_ML/plottable/predictions_plot_1.png')
+    PIL_image2 = load_image('D:/PulpitE/FPL_ML/plottable/predictions_plot_2.png')
 
     content = st.container()
     bottom_menu = st.columns((4, 1, 1))
 
 
+    # with bottom_menu[2]:
+    #     batch_size = st.selectbox("Page Size", options=[25, 50, 100])
     with bottom_menu[2]:
-        batch_size = st.selectbox("Page Size", options=[25, 50, 100])
-    with bottom_menu[1]:
         total_pages = (
             5
         )
