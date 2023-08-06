@@ -14,8 +14,15 @@ page_names_to_funcs = {
 }
 
 with st.sidebar:
-    selected = option_menu("Menu", ["Overview", 'Predictions', 'How it works?'], 
-        icons=['house', 'graph-up', 'question'], menu_icon="list", default_index=1)
+    selected = option_menu(
+        "Menu", ["Overview", 'Predictions', 'How it works?'], 
+        icons=['house', 'graph-up', 'question'],
+        menu_icon="list", 
+         styles={
+            "container": {"background-color": "#f0f2f6"},
+            "nav-link-selected": {"background-color": "#ff5d5d"},
+         }
+        )
 
 page_names_to_funcs[selected]()
 
