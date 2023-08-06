@@ -27,7 +27,14 @@ def page2():
         current_page = st.number_input(
             "Page", min_value=1, max_value=total_pages, step=1
         )
+    with bottom_menu[1]:
+        option = st.selectbox(
+            'Choose position',
+            ('All positions', 'Goalkeepers', 'Defenders', 'Midfielders', 'Forwards')
+        )
     with bottom_menu[0]:
         st.markdown(f"Page **{current_page}** of **{total_pages}** ")
         
     content.image(PIL_images[current_page - 1], caption='Point predictions for next gameweek')
+        
+    
