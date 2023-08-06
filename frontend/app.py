@@ -1,7 +1,6 @@
 import streamlit as st
-import numpy as np
-import matplotlib.pylab as plt
-import time
+from streamlit_option_menu import option_menu
+
 from pages.page1 import page1
 from pages.page2 import page2
 from pages.page3 import page3
@@ -11,9 +10,12 @@ st.set_page_config(layout="wide")
 page_names_to_funcs = {
     "Overview": page1,
     "Predictions": page2,
-    "Model architecture": page3,
+    "How it works?": page3,
 }
 
-selected_page = st.sidebar.radio("", page_names_to_funcs.keys())
+with st.sidebar:
+    selected = option_menu("Menu", ["Overview", 'Predictions', 'How it works?'], 
+        icons=['house', 'graph-up', 'question'], menu_icon="list", default_index=1)
 
-page_names_to_funcs[selected_page]()
+page_names_to_funcs[selected]()
+
