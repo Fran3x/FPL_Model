@@ -25,7 +25,8 @@ with st.sidebar:
             styles={
                 # "container": {"background-color": "#f0f2f6"},
                 "container": {"background-color": "#262730"},
-                "nav-link-selected": {"background-color": "#ff5d5d"},
+                # "nav-link-selected": {"background-color": "#ff5d5d"},
+                "nav-link-selected": {"background-color": "#800080"},
             }
         )
 
