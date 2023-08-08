@@ -32,7 +32,7 @@ def get_images(plots_all, plots_gk, plots_def, plots_mid, plots_fwd):
 def page2():
     # st.title("Fantasy Premier League point predictions")
     
-    plot_dir = "plottable"
+    plot_dir = ".\plottable"
     plottable_images = os.listdir(plot_dir)
     plots_all, plots_gk, plots_def, plots_mid, plots_fwd = get_number_of_plots(plottable_images)
     

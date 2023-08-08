@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 
 def page3():
     st.title("Model architecture")
@@ -52,3 +53,11 @@ def page3():
         pagination.dataframe(data=pages[current_page - 1], 
             #  use_container_width=True
         )
+
+    def file_selector(folder_path='.'):
+        filenames = os.listdir(folder_path)
+        selected_filename = st.selectbox('Select a file', filenames)
+        return os.path.join(folder_path, selected_filename)
+
+    filename = file_selector()
+    st.write('You selected `%s`' % filename)
