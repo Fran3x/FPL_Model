@@ -4,6 +4,7 @@ from streamlit_option_menu import option_menu
 from pages_list.page1 import page1
 from pages_list.page2 import page2
 from pages_list.page3 import page3
+from pages_list.page4 import page4
 
 st.set_page_config(
     layout="wide",
@@ -18,6 +19,7 @@ page_names_to_funcs = {
     "Overview": page1,
     "Predictions": page2,
     "How it works?": page3,
+    "About": page4,
 }
 
 with st.sidebar:
@@ -34,8 +36,8 @@ with st.sidebar:
         st.write("")
     
     selected = option_menu(
-        "Menu", ["Overview", 'Predictions', 'How it works?'], 
-        icons=['house', 'graph-up', 'question'],
+        "Menu", ["Overview", 'Predictions', 'How it works?', 'About'], 
+        icons=['house', 'graph-up', 'question', 'info'],
         menu_icon="list", 
             styles={
                 # "container": {"background-color": "#f0f2f6"},
