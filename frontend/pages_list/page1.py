@@ -26,4 +26,4 @@ def page1():
             """)
         
     with col2:
-        st.image("https://e0.365dm.com/22/08/1600x900/skysports-fantasy-premier-league_5864666.jpg?20220814171817")
+        st.image("https://www.pngmart.com/files/23/Premier-League-Logo-PNG-Clipart.png", width=580)

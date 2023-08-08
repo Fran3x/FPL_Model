@@ -21,6 +21,17 @@ page_names_to_funcs = {
 }
 
 with st.sidebar:
+    col1, col2, col3 = st.columns([1,1,1])
+
+    with col1:
+        st.write("")
+
+    with col2:
+        st.image("https://www.pngmart.com/files/23/Premier-League-Logo-PNG-Clipart.png")
+
+    with col3:
+        st.write("")
+    
     selected = option_menu(
         "Menu", ["Overview", 'Predictions', 'How it works?'], 
         icons=['house', 'graph-up', 'question'],
@@ -32,6 +43,7 @@ with st.sidebar:
                 "nav-link-selected": {"background-color": "#800080"},
             }
         )
+    
 
 page_names_to_funcs[selected]()
 
