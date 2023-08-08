@@ -11,6 +11,9 @@ st.set_page_config(
     page_icon = "https://freepngimg.com/download/premier_league/32207-5-premier-league-file.png"
 )
 
+with open('./frontend/style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 page_names_to_funcs = {
     "Overview": page1,
     "Predictions": page2,
