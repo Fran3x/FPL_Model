@@ -1,9 +1,9 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-from pages.page1 import page1
-from pages.page2 import page2
-from pages.page3 import page3
+from pages_list.page1 import page1
+from pages_list.page2 import page2
+from pages_list.page3 import page3
 
 st.set_page_config(
     layout="wide",
