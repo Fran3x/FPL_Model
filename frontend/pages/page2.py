@@ -19,11 +19,12 @@ def get_number_of_plots(plottable_images):
 
 @st.cache(allow_output_mutation=True)
 def get_images(plots_all, plots_gk, plots_def, plots_mid, plots_fwd):
-    PIL_images_all = [load_image('D:/PulpitE/FPL_ML/plottable/predictions_plot_All_' + str(i) + ".png") for i in range(1, plots_all + 1)]
-    PIL_images_GK = [load_image('D:/PulpitE/FPL_ML/plottable/predictions_plot_GK_' + str(i) + ".png") for i in range(1, plots_gk + 1)]
-    PIL_images_DEF = [load_image('D:/PulpitE/FPL_ML/plottable/predictions_plot_DEF_' + str(i) + ".png") for i in range(1, plots_def + 1)]
-    PIL_images_MID = [load_image('D:/PulpitE/FPL_ML/plottable/predictions_plot_MID_' + str(i) + ".png") for i in range(1, plots_mid + 1)]
-    PIL_images_FWD = [load_image('D:/PulpitE/FPL_ML/plottable/predictions_plot_FWD_' + str(i) + ".png") for i in range(1, plots_fwd + 1)]
+    
+    PIL_images_all = [load_image('plottable/predictions_plot_All_' + str(i) + ".png") for i in range(1, plots_all + 1)]
+    PIL_images_GK = [load_image('plottable/predictions_plot_GK_' + str(i) + ".png") for i in range(1, plots_gk + 1)]
+    PIL_images_DEF = [load_image('plottable/predictions_plot_DEF_' + str(i) + ".png") for i in range(1, plots_def + 1)]
+    PIL_images_MID = [load_image('plottable/predictions_plot_MID_' + str(i) + ".png") for i in range(1, plots_mid + 1)]
+    PIL_images_FWD = [load_image('plottable/predictions_plot_FWD_' + str(i) + ".png") for i in range(1, plots_fwd + 1)]
     
     return PIL_images_all, PIL_images_GK, PIL_images_DEF, PIL_images_MID, PIL_images_FWD
 
@@ -31,7 +32,7 @@ def get_images(plots_all, plots_gk, plots_def, plots_mid, plots_fwd):
 def page2():
     # st.title("Fantasy Premier League point predictions")
     
-    plot_dir = "D:/PulpitE/FPL_ML/plottable/"
+    plot_dir = "plottable/"
     plottable_images = os.listdir(plot_dir)
     plots_all, plots_gk, plots_def, plots_mid, plots_fwd = get_number_of_plots(plottable_images)
     
