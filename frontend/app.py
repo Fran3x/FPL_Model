@@ -27,7 +27,8 @@ with st.sidebar:
         st.write("")
 
     with col2:
-        st.image("https://www.pngmart.com/files/23/Premier-League-Logo-PNG-Clipart.png")
+        # st.image("https://www.pngmart.com/files/23/Premier-League-Logo-PNG-Clipart.png")
+        st.image("https://www.pngkit.com/png/full/213-2133496_premier-league-and-fa-cup-premier-league-logo.png")
 
     with col3:
         st.write("")
