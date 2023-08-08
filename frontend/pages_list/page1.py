@@ -13,7 +13,7 @@ def page1():
                 Are you ready to dominate your fantasy league? Look no further! Our FPL Predictor uses advanced machine learning algorithms to forecast player performance in the upcoming gameweeks of Premier League. Our model analyzes player statistics, historical data, match fixtures, and more to give you accurate predictions for player points.
 
 
-                ## Why Fantasy League Predictor?
+                ## Why FPL Predictor?
 
                 - 📊 **Data-Driven**: Our predictions are based on a wealth of data, ensuring accuracy and reliability.
                 - 🧠 **Machine Learning Magic**: Our advanced algorithms adapt and learn from past performances to deliver the best predictions.
@@ -22,7 +22,7 @@ def page1():
 
                 ## Get Started Today!
 
-                Join the ranks of successful fantasy managers who trust Fantasy League Predictor. Whether you're a seasoned manager or a newcomer, our predictions will give you the edge you need to conquer your fantasy league.
+                Join the ranks of successful fantasy managers who trust FPL Predictor. Whether you're a seasoned manager or a newcomer, our predictions will give you the edge you need to conquer your fantasy league.
             """)
         
     with col2:
