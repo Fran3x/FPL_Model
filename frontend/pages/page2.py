@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import os
+from pathlib import Path
 
 @st.cache(allow_output_mutation=True)
 def load_image(path):
@@ -31,8 +32,11 @@ def get_images(plots_all, plots_gk, plots_def, plots_mid, plots_fwd):
 
 def page2():
     # st.title("Fantasy Premier League point predictions")
-    
-    plot_dir = ".\plottable"
+    parent_path = Path(__file__).parent.parent.parent
+    print(parent_path)
+
+    plot_dir = parent_path / "plottable"
+    print(plot_dir)
     plottable_images = os.listdir(plot_dir)
     plots_all, plots_gk, plots_def, plots_mid, plots_fwd = get_number_of_plots(plottable_images)
     
