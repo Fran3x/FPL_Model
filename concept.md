@@ -108,7 +108,9 @@ File order:
 
 
 Predictions file order:
-- 
+- next_season.ipynb (generates DF for all logs in current/upcoming season)
+- Pred_next_season.ipynb (generates DF with predictions)
+- plottable_next_season.ipynb (pngs in plottable folder)
 
 
 Other ideas:
