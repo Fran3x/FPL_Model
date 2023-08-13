@@ -107,6 +107,12 @@ File order:
 - fpl_fbref_elo_lstm.csv (+ lstm pred)
 
 
+Predictions file order:
+- next_season.ipynb (generates DF for all logs in current/upcoming season)
+- Pred_next_season.ipynb (generates DF with predictions)
+- plottable_next_season.ipynb (pngs in plottable folder)
+
+
 Other ideas:
 - scaling, normalizing input data
 - extending data to previous seasons
