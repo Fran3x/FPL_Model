@@ -107,6 +107,10 @@ File order:
 - fpl_fbref_elo_lstm.csv (+ lstm pred)
 
 
+Predictions file order:
+- 
+
+
 Other ideas:
 - scaling, normalizing input data
 - extending data to previous seasons
