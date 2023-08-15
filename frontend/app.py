@@ -18,7 +18,7 @@ with open('./frontend/style.css') as f:
 page_names_to_funcs = {
     "Overview": page1,
     "Predictions": page2,
-    "How it works?": page3,
+    "Best eleven": page3,
     "About": page4,
 }
 
@@ -36,8 +36,8 @@ with st.sidebar:
         st.write("")
     
     selected = option_menu(
-        "Menu", ["Overview", 'Predictions', 'How it works?', 'About'], 
-        icons=['house', 'graph-up', 'question', 'info'],
+        "Menu", ["Overview", 'Predictions', 'Best eleven', 'About'], 
+        icons=['house', 'graph-up', 'star', 'info'],
         menu_icon="list", 
             styles={
                 # "container": {"background-color": "#f0f2f6"},
