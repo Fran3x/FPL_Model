@@ -177,6 +177,8 @@ def knapsack_multichoice_onepick(weights, values, max_weight, verbose=False):
         current_array = [-1 for _ in range(max_weight + 1)]
         current_path = [[] for _ in range(max_weight + 1)]
         for j in range(len(weights[i])):
+            # print("MaxW", weights[i][j], max_weight)
+            weights[i][j] = round(weights[i][j])
             for k in range(weights[i][j], max_weight + 1):
                 if last_array[k - weights[i][j]] > 0:
                     if current_array[k] < last_array[k - weights[i][j]] + values[i][j]:

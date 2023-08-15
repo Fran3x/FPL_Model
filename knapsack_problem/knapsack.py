@@ -77,7 +77,7 @@ def players_preproc(players_list, formation):
     mid_values, mid_weights, mid_indexes = generate_group(players_list, "MID")
     mid_comb_values, mid_comb_weights, mid_comb_indexes = group_preproc(mid_values, mid_weights, mid_indexes, max_mid)
 
-    att_values, att_weights, att_indexes = generate_group(players_list, "ATT")
+    att_values, att_weights, att_indexes = generate_group(players_list, "FWD")
     att_comb_values, att_comb_weights, att_comb_indexes = group_preproc(att_values, att_weights, att_indexes, max_att)
 
     result_comb_values = [gk_comb_values, def_comb_values, mid_comb_values, att_comb_values]
