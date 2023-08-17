@@ -50,7 +50,7 @@ Features:
     
 - Related to cards:
     - 'yellow_cards_avg5',
-    - red_cards_avg5'
+    - 'red_cards_avg5'
     
 - Other:
     - 'was_home'
