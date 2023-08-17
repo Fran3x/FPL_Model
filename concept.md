@@ -86,7 +86,7 @@ How to update data:
 Order:
 - get new data from vaastav
 - move cleaned_merged_seasons.csv to /data
-- move data/2022-23 folder from /vaastav to /data
+- move data/current_season folder from /vaastav to /data
 - update.ipynb
 - fbref_scrape.ipynb to get all fbref data (~50 mins for season)
 - merge_FPL_fbref.ipynb (~1h) albo merge_FPL_fbref_better_try.ipynb 
