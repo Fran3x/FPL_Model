@@ -1,3 +1,7 @@
+def neutralize_name(name):
+    return name.replace(" ", "-").replace("ï", "i").replace("é", "e").replace("á", "a").replace("ó", "o").replace("Á", "A").replace("ø", "o").replace("ć", "c").replace("í", "i").replace("ú", "u").replace("Ć", "C").replace("ã", "a").replace("ğ", "g").replace("ş", "s").replace("É", "E").replace("ñ", "n").replace("Ł", "L").replace("ń", "n").replace("ß", "ss").replace("ç", "c").replace("İ", "I").replace("č", "c").replace("ö", "o").replace("ë", "e").replace("š", "s").replace("ä", "a").replace("Ç", "C").replace("ü", "u").replace("Ø", "O").replace("ú", "u").replace("ú", "u").replace("è", "e").replace("ê", "e")
+
+
 names = {
     # understat: fpl
     'Cristiano Ronaldo': 'Cristiano Ronaldo dos Santos Aveiro',
@@ -99,10 +103,6 @@ names = {
     'Darwin Núñez': 'Darwin Núñez',
     'Ivan Perisic': 'Ivan Perišić'
 }
-
-def neutralize_name(name):
-    return name.replace(" ", "-").replace("ï", "i").replace("é", "e").replace("á", "a").replace("ó", "o").replace("Á", "A").replace("ø", "o").replace("ć", "c").replace("í", "i").replace("ú", "u").replace("Ć", "C").replace("ã", "a").replace("ğ", "g").replace("ş", "s").replace("É", "E").replace("ñ", "n").replace("Ł", "L").replace("ń", "n").replace("ß", "ss").replace("ç", "c").replace("İ", "I").replace("č", "c").replace("ö", "o").replace("ë", "e").replace("š", "s").replace("ä", "a").replace("Ç", "C").replace("ü", "u").replace("Ø", "O").replace("ú", "u").replace("ú", "u").replace("è", "e").replace("ê", "e")
-
 
 
 def name_fbref_to_fpl(name):
