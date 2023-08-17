@@ -89,7 +89,7 @@ Order:
 - move data/current_season folder from /vaastav to /data
 - update.ipynb
 - fbref_scrape.ipynb to get all fbref data (~50 mins for season)
-- merge_FPL_fbref.ipynb (~1h) albo merge_FPL_fbref_better_try.ipynb 
+- merge_FPL_fbref.ipynb (~1h) or merge_FPL_fbref_better_try.ipynb 
 - team_elo_rating.ipynb
 - assign_team_to_df.ipynb
 - adding_features.ipynb (~15 min)
@@ -100,7 +100,6 @@ Order:
 File order:
 - cleaned_merged_seasons.csv
 - logs_all.csv (fbRef)
-- logs_features.csv (additional files, not used later)
 - fpl_players.csv (FPL)
 - fpl_fbref_players.csv (2 previous files merged)
 - fpl_fbref_elo_players.csv (+ team rating)
