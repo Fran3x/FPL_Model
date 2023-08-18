@@ -111,7 +111,7 @@ Predictions file order:
 - team_elo_rating.ipynb (to get newest elo ratings)
 - active_players.ipynb (to track injuries)
 - next_season.ipynb (~7 mins, generates DF for all logs in current/upcoming season)
-- Pred_next_season.ipynb (generates DF with predictions with 0 predicted for every injured player)
+- pred_next_season.ipynb (generates DF with predictions with 0 predicted for every injured player)
 - plottable_next_season.ipynb (pngs in plottable folder)
 
 
