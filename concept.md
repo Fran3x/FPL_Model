@@ -91,8 +91,8 @@ Order:
 - fbref_scrape.ipynb to get all fbref data (~40 mins for season)
 - merge_FPL_fbref_better_try.ipynb
 - team_elo_rating.ipynb (to get newest elo ratings)
-- assign_team_to_previous.ipynb
-- adding_features.ipynb (~15 min)
+- assign_team_to_previous.ipynb (~9 mins)
+- adding_features.ipynb (~15 mins)
 - LSTM_test.ipynb
 - XGBoost_predictions.ipynb
 
