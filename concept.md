@@ -90,8 +90,8 @@ Order:
 - update.ipynb
 - fbref_scrape.ipynb to get all fbref data (~40 mins for season)
 - merge_FPL_fbref_better_try.ipynb
-- team_elo_rating.ipynb
-- assign_team_to_df.ipynb
+- team_elo_rating.ipynb (to get newest elo ratings)
+- assign_team_to_previous.ipynb
 - adding_features.ipynb (~15 min)
 - LSTM_test.ipynb
 - XGBoost_predictions.ipynb
@@ -102,11 +102,11 @@ File order:
 - logs_all.csv (fbRef)
 - fpl_players.csv (FPL)
 - fpl_fbref_players.csv (2 previous files merged)
-- fpl_fbref_elo_players.csv (+ team rating)
-- fpl_fbref_elo_lstm.csv (+ lstm pred)
+- final_dataset.csv (with team elo ratings)
 
 
 Predictions file order:
+- team_elo_rating.ipynb (to get newest elo ratings)
 - active_players.ipynb (to track injuries)
 - next_season.ipynb (~7 mins, generates DF for all logs in current/upcoming season)
 - Pred_next_season.ipynb (generates DF with predictions with 0 predicted for every injured player)
