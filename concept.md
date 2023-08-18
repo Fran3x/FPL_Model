@@ -70,24 +70,13 @@ Player evaluation model:
 
 Other ideas:
 - calculating the biggest fixture swing
-- one hot encoding for positions
 
 
-Disclaimers:
-Emerson appears twice in epl_players
-
-
-How to update data:
-- new data folder from /vaastav
-- calling update.ipynb to merge previous_season with this_season and save it to fpl_players.csv
-- merging fpl with understat using data_prep.py
-
-
-Order:
+Data updating order:
 - get new data from vaastav
 - move cleaned_merged_seasons.csv to /data
 - move data/current_season folder from /vaastav to /data
-- update.ipynb
+- FPL_players.ipynb
 - fbref_scrape.ipynb to get all fbref data (~30 mins per season)
 - merge_FPL_fbref.ipynb
 - team_elo_rating.ipynb (to get newest elo ratings)
