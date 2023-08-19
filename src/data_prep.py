@@ -60,13 +60,13 @@ def get_epl_players():
     return epl_players
 
 
-def add_opp_team_for_current_season(dataset):
-    teams = pd.read_csv('data/2022-23/teams.csv')
+def add_opp_team_for_current_season(dataset, current_season, current_season_understat):
+    teams = pd.read_csv('data/' + current_season + '/teams.csv')
     
     # print(dataset.iloc[1])
-    print('LENGTH', dataset[dataset['season'] == CURRENT_SEASON_UNDERSTAT].shape)
+    print('LENGTH', dataset[dataset['season'] == current_season_understat].shape)
     
-    for i, row in dataset[(dataset['season'] == CURRENT_SEASON_UNDERSTAT) | (dataset['season'] == CURRENT_SEASON_FPL)].iterrows():
+    for i, row in dataset[(dataset['season'] == current_season_understat) | (dataset['season'] == current_season)].iterrows():
         dataset.at[i, 'opp_team_name'] = teams[teams['id'] == row['opponent_team']].iloc[0]['name']
 
     return dataset
