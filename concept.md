@@ -57,6 +57,7 @@ Player evaluation model:
 
 Other ideas:
 - calculating the biggest fixture swing
+- goalkeepers analysis (DF summary with shots conceded, xGC, xGC per shot, bonus points, etc.)
 
 
 Data updating order:
