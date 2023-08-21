@@ -105,3 +105,4 @@ To do:
 - how many days from last match
 - plottable folders
 - EDA
+- (pred + avg) / 2
