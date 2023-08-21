@@ -91,12 +91,17 @@ Predictions file order:
 - plottable_next_season.ipynb (pngs in plottable folder)
 
 
-Other ideas:
-- scaling, normalizing input data
+To do:
 - extending data to previous seasons
-- merging predictions with original dataframe
-- one notebook to rule them all
-- filling with zeros all fixtures when player did not attend
-- trying out transformers
-- validation set
-- saving best model
+- adjust xP for bonus
+- force model to learn xP - avg Points
+- config file
+- try linear model
+- price, transfers out/in as predictors
+- compare xG sum to Gls sum
+- compare old and new dataset and model
+- streamlit - stats tab
+- fill dataset with 0 min matches
+- how many days from last match
+- plottable folders
+- EDA
