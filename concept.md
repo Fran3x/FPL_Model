@@ -116,3 +116,4 @@ To do:
 - goalkeeper model
 - plottable add captain icon
 - is_penalty_taker, is_first_goalkeeper features
+- remove rows with 0 minutes played
