@@ -58,6 +58,7 @@ Player evaluation model:
 Other ideas:
 - calculating the biggest fixture swing
 - goalkeepers analysis (DF summary with shots conceded, xGC, xGC per shot, bonus points, etc.)
+- upcoming/previous fixtures analysis
 
 
 Data updating order:
@@ -106,3 +107,5 @@ To do:
 - plottable folders
 - EDA
 - (pred + avg) / 2
+- plottable color bug
+- add description on page
