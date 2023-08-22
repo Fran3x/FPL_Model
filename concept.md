@@ -106,3 +106,10 @@ To do:
 - add description on page
 - plottable add price
 - form component (weighted by days that past)
+- add bench to best eleven
+- divider line above Summary
+- store functions outside of notebooks
+- MAE@N
+- xP underestimated
+- evaluation as DataFrame
+- preds for more than 1 gameweek
