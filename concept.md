@@ -43,10 +43,6 @@ Features:
     - 'was_home'
 
 
-Feature ideas:
-- team elo rating (percentage difference)
-
-
 Player evaluation model:
 - expected points,
 - ownership,
@@ -106,6 +102,7 @@ To do:
 - how many days from last match
 - plottable folders
 - EDA
-- (pred + avg) / 2
 - plottable color bug
 - add description on page
+- plottable add price
+- form component (weighted by days that past)
