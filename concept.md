@@ -95,7 +95,6 @@ To do:
 - config file
 - try linear model
 - price, transfers out/in as predictors
-- compare xG sum to Gls sum
 - compare old and new dataset and model
 - streamlit - stats tab
 - fill dataset with 0 min matches
@@ -114,3 +113,6 @@ To do:
 - evaluation as DataFrame
 - preds for more than 1 gameweek
 - include penalties 
+- goalkeeper model
+- plottable add captain icon
+- is_penalty_taker, is_first_goalkeeper features
