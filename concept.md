@@ -83,6 +83,8 @@ File order:
 Predictions file order:
 - team_elo_rating.ipynb (to get newest elo ratings)
 - active_players.ipynb (to track injuries)
+- get_goalkeepers.ipynb (to get first choice goalkeepers)
+- df_features_for_next_season.ipynb (for next_season.ipynb)
 - next_season.ipynb (~7 mins, generates DF for all logs in current/upcoming season)
 - pred_next_season.ipynb (generates DF with predictions with 0 predicted for every injured player)
 - plottable_next_season.ipynb (pngs in plottable folder)
@@ -115,5 +117,6 @@ To do:
 - include penalties 
 - goalkeeper model
 - plottable add captain icon
-- is_penalty_taker, is_first_goalkeeper features
+- is_penalty_taker features
 - remove rows with 0 minutes played
+- separate model for players with less than 10 caps registered
