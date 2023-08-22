@@ -7,7 +7,7 @@ CUT_OFF_GAMEWEEK = 31
 SEASON_TO_PREDICT = "2022-23"
 
 # features
-FEATURES = ['Was_home',
+FEATURES_OUTFIELD = ['Was_home',
  'Rating_difference',
  'Value',
  'Transfers_balance',
