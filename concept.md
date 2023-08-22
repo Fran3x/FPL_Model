@@ -43,10 +43,6 @@ Features:
     - 'was_home'
 
 
-Feature ideas:
-- team elo rating (percentage difference)
-
-
 Player evaluation model:
 - expected points,
 - ownership,
@@ -58,6 +54,7 @@ Player evaluation model:
 Other ideas:
 - calculating the biggest fixture swing
 - goalkeepers analysis (DF summary with shots conceded, xGC, xGC per shot, bonus points, etc.)
+- upcoming/previous fixtures analysis
 
 
 Data updating order:
@@ -105,4 +102,7 @@ To do:
 - how many days from last match
 - plottable folders
 - EDA
-- (pred + avg) / 2
+- plottable color bug
+- add description on page
+- plottable add price
+- form component (weighted by days that past)
