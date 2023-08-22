@@ -1,16 +1,3 @@
-Model predicting points:
-- inputs:
-  1. predicted xG
-  2. predicted xA
-  3. predicted CS
-  4. predicted bps
-- or:
-  1. longer timeframe mean yellow cards
-  2. longer timeframe mean red cards
-  3. weighted average from last 100 days of xG, xA, BPS etc.
-- one model for every position
-
-
 Lineup evaluation model:
 - projected points,
 - flexibility:
@@ -70,6 +57,7 @@ Player evaluation model:
 
 Other ideas:
 - calculating the biggest fixture swing
+- goalkeepers analysis (DF summary with shots conceded, xGC, xGC per shot, bonus points, etc.)
 
 
 Data updating order:
@@ -82,7 +70,6 @@ Data updating order:
 - team_elo_rating.ipynb (to get newest elo ratings)
 - assign_team_to_previous.ipynb (~9 mins)
 - dataset_cleaning.csv (renaming columns etc.)
-- adding_features.ipynb (~15 mins)
 - LSTM_test.ipynb
 - XGBoost_predictions.ipynb
 
@@ -90,7 +77,7 @@ Data updating order:
 File order:
 - cleaned_merged_seasons.csv (from vaastav)
 - fpl_players.csv (FPL)
-- logs_all.csv (fbRef)
+- logs_all_PL.csv (fbRef)
 - fpl_fbref_players.csv (2 previous files merged)
 - final_dataset.csv (with team elo ratings)
 - FPL_logs.csv (cleaned dataset)
@@ -104,12 +91,18 @@ Predictions file order:
 - plottable_next_season.ipynb (pngs in plottable folder)
 
 
-Other ideas:
-- scaling, normalizing input data
+To do:
 - extending data to previous seasons
-- merging predictions with original dataframe
-- one notebook to rule them all
-- filling with zeros all fixtures when player did not attend
-- trying out transformers
-- validation set
-- saving best model
+- adjust xP for bonus
+- force model to learn xP - avg Points
+- config file
+- try linear model
+- price, transfers out/in as predictors
+- compare xG sum to Gls sum
+- compare old and new dataset and model
+- streamlit - stats tab
+- fill dataset with 0 min matches
+- how many days from last match
+- plottable folders
+- EDA
+- (pred + avg) / 2
