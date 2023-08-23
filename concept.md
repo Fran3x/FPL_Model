@@ -125,3 +125,4 @@ To do:
 - plots frontend
 - 45 missing rows in nextseason
 - estimate expected minutes
+- refactor to stop using vaastav
