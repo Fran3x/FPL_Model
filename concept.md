@@ -94,7 +94,6 @@ To do:
 - extending data to previous seasons
 - adjust xP for bonus
 - force model to learn xP - avg Points
-- config file
 - try linear model
 - price, transfers out/in as predictors
 - compare old and new dataset and model
@@ -114,9 +113,15 @@ To do:
 - xP underestimated
 - evaluation as DataFrame
 - preds for more than 1 gameweek
-- include penalties 
 - goalkeeper model
 - plottable add captain icon
 - is_penalty_taker features
 - remove rows with 0 minutes played
 - separate model for players with less than 10 caps registered
+- investigate missing rows
+- pairwise called in a wrong order
+- optimize predict for positional model 
+- solve performance issues - iterrows, apply 
+- plots frontend
+- 45 missing rows in nextseason
+- estimate expected minutes
