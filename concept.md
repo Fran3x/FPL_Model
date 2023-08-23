@@ -131,3 +131,4 @@ To do:
 
 
 - run global_scraper.py (~6 mins)
+- run global_merger.py
