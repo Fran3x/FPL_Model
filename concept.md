@@ -60,6 +60,7 @@ Other ideas:
 Data updating order:
 - get new data from vaastav
 - move cleaned_merged_seasons.csv to /data
+- move master_team_list.csv from /vaastav to /data
 - move data/current_season folder from /vaastav to /data
 - FPL_players.ipynb
 - fbref_scrape.ipynb to get all fbref data (~30 mins per season)
@@ -83,6 +84,8 @@ File order:
 Predictions file order:
 - team_elo_rating.ipynb (to get newest elo ratings)
 - active_players.ipynb (to track injuries)
+- get_goalkeepers.ipynb (to get first choice goalkeepers)
+- df_features_for_next_season.ipynb (for next_season.ipynb)
 - next_season.ipynb (~7 mins, generates DF for all logs in current/upcoming season)
 - pred_next_season.ipynb (generates DF with predictions with 0 predicted for every injured player)
 - plottable_next_season.ipynb (pngs in plottable folder)
@@ -92,7 +95,6 @@ To do:
 - extending data to previous seasons
 - adjust xP for bonus
 - force model to learn xP - avg Points
-- config file
 - try linear model
 - price, transfers out/in as predictors
 - compare old and new dataset and model
@@ -112,8 +114,21 @@ To do:
 - xP underestimated
 - evaluation as DataFrame
 - preds for more than 1 gameweek
-- include penalties 
 - goalkeeper model
 - plottable add captain icon
-- is_penalty_taker, is_first_goalkeeper features
+- is_penalty_taker features
 - remove rows with 0 minutes played
+- separate model for players with less than 10 caps registered
+- investigate missing rows
+- pairwise called in a wrong order
+- optimize predict for positional model 
+- solve performance issues - iterrows, apply 
+- plots frontend
+- 45 missing rows in nextseason
+- estimate expected minutes
+- refactor to stop using vaastav
+
+
+
+- run global_scraper.py (~6 mins)
+- run global_merger.py
