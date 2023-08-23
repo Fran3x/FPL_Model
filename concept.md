@@ -60,6 +60,7 @@ Other ideas:
 Data updating order:
 - get new data from vaastav
 - move cleaned_merged_seasons.csv to /data
+- move master_team_list.csv from /vaastav to /data
 - move data/current_season folder from /vaastav to /data
 - FPL_players.ipynb
 - fbref_scrape.ipynb to get all fbref data (~30 mins per season)
@@ -126,3 +127,7 @@ To do:
 - 45 missing rows in nextseason
 - estimate expected minutes
 - refactor to stop using vaastav
+
+
+
+- run global_scraper.py (~6 mins)
