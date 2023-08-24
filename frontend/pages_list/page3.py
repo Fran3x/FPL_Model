@@ -15,6 +15,6 @@ def load_image(url):
 
 def page3():
     st.title("Best eleven")
-    st.write("Best eleven helps you pick optimal players for next gameweek based on our model prediction. It also suggests the best captain(C) and vice-captain(VC) for your team.")
+    st.write("Best eleven helps you pick optimal players for next gameweek based on model predictions. It also suggests the best captain(C) and vice-captain(VC) for your team.")
     image = load_image("https://resources.premierleague.com/premierleague/photos/players/250x250/p172850.png")
     st.image(image, caption="Best eleven for next gameweek")
