@@ -162,7 +162,8 @@ def get_contrained_solution(scores, paths, count):
 def knapsack_multichoice_onepick(weights, values, max_weight, verbose=False):
     if len(weights) == 0:
         return 0
-
+    
+    max_weight = int(max_weight)
     last_array = [-1 for _ in range(max_weight + 1)]
     last_path = [[] for _ in range(max_weight + 1)]
     for i in range(len(weights[0])):
