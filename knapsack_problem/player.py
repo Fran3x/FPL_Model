@@ -22,7 +22,8 @@ class Player:
             penalty_boost: float = 0,
             strategy_boost: float = 0,
             sofascore_rating: float = 0,
-            next_match_elo_dif: float = 0
+            next_match_elo_dif: float = 0,
+            benched = False
     ):
         self.name = name
         self.position = position
@@ -37,6 +38,7 @@ class Player:
         self.strategy_boost = strategy_boost
         self.sofascore_rating = sofascore_rating
         self.next_match_elo_dif = next_match_elo_dif
+        self.benched = benched
 
     def __str__(self):
         # print(self.standard_price)
