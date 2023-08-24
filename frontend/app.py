@@ -36,7 +36,7 @@ with st.sidebar:
         st.write("")
     
     selected = option_menu(
-        "Menu", ["Overview", 'Predictions', 'Best eleven', 'About'], 
+        "Menu", ["Overview", 'Predictions', 'Best squad', 'About'], 
         icons=['house', 'graph-up', 'star', 'info'],
         menu_icon="list", 
             styles={
