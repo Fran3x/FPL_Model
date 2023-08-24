@@ -14,7 +14,7 @@ def load_image(url):
     return image
 
 def page3():
-    st.title("Best eleven")
-    st.write("Best eleven helps you pick optimal players for next gameweek based on model predictions. It also suggests the best captain(C) and vice-captain(VC) for your team.")
+    st.title("Best squad")
+    st.write("Best squad helps you pick optimal players for next gameweek based on model predictions. It also suggests the best captain(C) and vice-captain(VC) for your team. The bench is just filled with cheapest players to spend more on starting eleven. Budget of 100£ is assumed since it`s a starting budget for everyone.")
     image = load_image("https://resources.premierleague.com/premierleague/photos/players/250x250/p172850.png")
-    st.image(image, caption="Best eleven for next gameweek")
+    st.image(image, caption="Best squad for next gameweek")

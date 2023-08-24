@@ -18,7 +18,7 @@ with open('./frontend/style.css') as f:
 page_names_to_funcs = {
     "Overview": page1,
     "Predictions": page2,
-    "Best eleven": page3,
+    "Best squad": page3,
     "About": page4,
 }
 
