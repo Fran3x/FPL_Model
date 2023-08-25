@@ -103,8 +103,7 @@ To do:
 - plottable folders
 - EDA
 - plottable color bug
-- add description on page
-- plottable add price
+- add descriptions on page
 - form component (weighted by days that past)
 - add bench to best eleven
 - divider line above Summary
@@ -113,7 +112,6 @@ To do:
 - xP underestimated
 - evaluation as DataFrame
 - preds for more than 1 gameweek
-- goalkeeper model
 - plottable add captain icon
 - is_penalty_taker features
 - remove rows with 0 minutes played
@@ -126,3 +124,5 @@ To do:
 - 45 missing rows in nextseason
 - estimate expected minutes
 - use footballers photos to visualize first 11
+- information about when was data updated for the last time
+- form xP and xP_avg_points
