@@ -9,7 +9,7 @@ SEASON_TO_PREDICT = "2022-23"
 # features
 FEATURES_OUTFIELD = ['Was_home',
  'Rating_difference',
- 'Value',
+ 'Price',
  'Transfers_balance',
  'Avg_FPL_points',
  'Min_2',
@@ -49,7 +49,7 @@ FEATURES_OUTFIELD = ['Was_home',
 
 FEATURES_GK = ['Was_home',
  'Rating_difference',
- 'Value',
+ 'Price',
  'Transfers_balance',
  'Avg_FPL_points',
  'Min_2',
