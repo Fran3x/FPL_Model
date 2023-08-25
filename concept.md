@@ -118,7 +118,6 @@ To do:
 - separate model for players with less than 10 caps registered
 - investigate missing rows
 - pairwise called in a wrong order
-- optimize predict for positional model 
 - solve performance issues - iterrows, apply 
 - plots frontend
 - 45 missing rows in nextseason
@@ -127,6 +126,5 @@ To do:
 - information about when was data updated for the last time
 - form xP and xP_avg_points
 - dynamically save features to file
-- PositionalModel uses same features for GK and outfield
-- price = 4.5 or 45
 - use web name
+- estimate xMins

@@ -47,16 +47,6 @@ class PositionalModel:
         if X_preds[X_preds["FPL_pos"] != "GK"].size > 0:
             X_preds.loc[X_preds["FPL_pos"] != "GK", "Pred"] =  self.model_outfield.predict( X_preds[X_preds["FPL_pos"] != "GK"][self.features_outfield] )
         return X_preds["Pred"].to_list()
-        # output = []
-        # i = 0
-        # for ind, row in X.iterrows():
-        #     # print(i)
-        #     if row["FPL_pos"] == "GK":
-        #         output.append( self.model_GK.predict( X.head(i+1).tail(1)[self.features_GK] ) )
-        #     if row["FPL_pos"] != "GK":
-        #         output.append( self.model_outfield.predict( X.head(i+1).tail(1)[self.features_outfield] ) )
-        #     i += 1
-        # return np.array(output).flatten()
     
     def custom_predict_GK(self, X):
             XGB_COMPONENT = 0.3
