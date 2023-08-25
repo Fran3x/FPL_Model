@@ -126,3 +126,7 @@ To do:
 - use footballers photos to visualize first 11
 - information about when was data updated for the last time
 - form xP and xP_avg_points
+- dynamically save features to file
+- PositionalModel uses same features for GK and outfield
+- price = 4.5 or 45
+- use web name
