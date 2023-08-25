@@ -92,10 +92,8 @@ Predictions file order:
 
 To do:
 - extending data to previous seasons
-- adjust xP for bonus
 - force model to learn xP - avg Points
 - try linear model
-- price, transfers out/in as predictors
 - compare old and new dataset and model
 - streamlit - stats tab
 - fill dataset with 0 min matches
@@ -127,4 +125,4 @@ To do:
 - form xP and xP_avg_points
 - dynamically save features to file
 - use web name
-- estimate xMins
+- average value of prediction in evaluation
