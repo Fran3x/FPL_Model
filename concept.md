@@ -14,35 +14,6 @@ Lineup evaluation model:
 - own metric focusing on correct order (Haaland > Salah)
 
 
-Features:
-- Related to goal appetite:
-    - 'goals_avg5'
-    - 'xG_avg5'
-    - 'shots_avg5'
-
-- Related to creativity:
-    - 'assists_fpl_avg5'
-    
-- Related to defensive capabilities:
-    - 'clean_sheets_avg5'
-    - 'goals_conceded_avg5'
-
-- Related to general performance:
-    - 'bonus_avg5', 
-    - 'bps_avg5', 
-
-- Related to team offensive form:
-    - 'xGBuildup_avg5'
-    - 'xGChain_avg5'
-    
-- Related to cards:
-    - 'yellow_cards_avg5',
-    - 'red_cards_avg5'
-    
-- Other:
-    - 'was_home'
-
-
 Player evaluation model:
 - expected points,
 - ownership,
@@ -67,8 +38,6 @@ Data updating order:
 - team_elo_rating.ipynb (to get newest elo ratings)
 - assign_team_to_previous.ipynb (~9 mins)
 - dataset_cleaning.csv (renaming columns etc.)
-- LSTM_test.ipynb
-- XGBoost_predictions.ipynb
 
 
 File order:
