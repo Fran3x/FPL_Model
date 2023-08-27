@@ -2,7 +2,7 @@ from xgboost import XGBRegressor
 import numpy as np
 
 class PositionalModel:
-    def __init__(self, features_GK, features_outfield, to_predict, model_GK=None, model_outfield=None):
+    def __init__(self, features_GK, features_outfield, to_predict, model_GK=None, model_outfield=None, ):
         self.features_GK = features_GK
         self.features_outfield = features_outfield
         self.to_predict = to_predict
@@ -55,7 +55,7 @@ class PositionalModel:
 
             model_pred = np.array(self.model_GK.predict_old(X))
             overall_pred = np.array([row["Avg_FPL_points"] for i, row in X.iterrows()])
-            form_pred = np.array([row["FPL_points_4"] for i, row in X.iterrows()])
+            form_pred = np.array([row["FPL_points_5"] for i, row in X.iterrows()])
 
             return np.add( model_pred * XGB_COMPONENT, overall_pred * OVERALL_COMPONENT, form_pred * FORM_COMPONENT )
     
@@ -66,7 +66,7 @@ class PositionalModel:
 
             model_pred = np.array(self.model_outfield.predict_old(X))
             overall_pred = np.array([row["Avg_FPL_points"] for i, row in X.iterrows()])
-            form_pred = np.array([row["FPL_points_4"] for i, row in X.iterrows()])
+            form_pred = np.array([row["FPL_points_5"] for i, row in X.iterrows()])
 
             return np.add( model_pred * XGB_COMPONENT, overall_pred * OVERALL_COMPONENT, form_pred * FORM_COMPONENT )
     

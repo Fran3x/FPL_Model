@@ -95,3 +95,5 @@ To do:
 - dynamically save features to file
 - use web name
 - average value of prediction in evaluation
+- try catboost
+- xgb custom loss function - weighted MSE?
