@@ -6,6 +6,30 @@ NEXT_GAMEWEEK = 3
 CUT_OFF_GAMEWEEK = 31
 SEASON_TO_PREDICT = "2022-23"
 
+# teams
+current_teams = [
+        'Arsenal',
+        'Aston Villa',
+        'Bournemouth',
+        'Brentford',
+        'Brighton',
+        'Burnley',
+        'Chelsea',
+        'Crystal Palace',
+        'Everton',
+        'Fulham',
+        'Liverpool',
+        'Luton',
+        'Manchester City',
+        'Manchester Utd',
+        'Newcastle Utd',
+        "Nott'ham Forest",
+        'Sheffield United',
+        'Tottenham',
+        'West Ham',
+        'Wolves'
+    ]
+
 # features
 FEATURES_OUTFIELD = ['Was_home',
  'Rating_difference',

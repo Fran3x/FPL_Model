@@ -275,3 +275,16 @@ def name_fbref_to_fpl(name):
     
     
     return neutralize_name(output)
+
+
+
+def team_understat_to_fpl(team_name):
+    if team_name == "Wolverhampton Wanderers":
+        return "Wolves"
+    if team_name == "Newcastle United":
+        return "Newcastle Utd"
+    if team_name == "Manchester United":
+        return "Manchester Utd"
+    if team_name == "Nottingham Forest":
+        return "Nott'ham Forest"
+    return team_name
