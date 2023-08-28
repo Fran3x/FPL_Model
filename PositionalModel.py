@@ -28,7 +28,7 @@ class PositionalModel:
                 random_state=42, 
                 iterations = 1000,
                 early_stopping_rounds = 10,
-                learning_rate = 0.12,
+                learning_rate = 0.1,
                 verbose = False
                 # verbosity = 0,
                 # n_estimators=500,
