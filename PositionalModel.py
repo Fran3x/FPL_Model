@@ -1,4 +1,6 @@
 from xgboost import XGBRegressor
+from sklearn.ensemble import GradientBoostingRegressor
+from catboost import CatBoostRegressor
 import numpy as np
 
 class PositionalModel:
@@ -10,8 +12,10 @@ class PositionalModel:
         if model_GK:
             self.model_GK = model_GK
         else:
-            self.model_GK = XGBRegressor(
-                random_state=42, verbosity = 0,
+            self.model_GK = CatBoostRegressor(
+                random_state=42, 
+                verbose = False
+                # verbosity = 0,
                 # n_estimators=500,
                 # early_stopping_rounds=5,
                 # learning_rate=0.2
@@ -20,8 +24,13 @@ class PositionalModel:
         if model_outfield:
             self.model_outfield = model_outfield
         else:
-            self.model_outfield = XGBRegressor(
-                random_state=42, verbosity = 0,
+            self.model_outfield = CatBoostRegressor(
+                random_state=42, 
+                iterations = 1000,
+                early_stopping_rounds = 10,
+                learning_rate = 0.12,
+                verbose = False
+                # verbosity = 0,
                 # n_estimators=500,
                 # early_stopping_rounds=5,
                 # learning_rate=0.2
@@ -34,10 +43,12 @@ class PositionalModel:
         # print(y[y["FPL_pos"] == "GK"].shape)
         self.model_GK.fit(X[X["FPL_pos"] == "GK"][self.features_GK], y[y["FPL_pos"] == "GK"][self.to_predict],
         # eval_set=[(X_valid[X_valid["FPL_pos"] == "GK"][self.features_GK], y_valid[y_valid["FPL_pos"] == "GK"][self.to_predict])],
-        verbose=False)
+        # verbose=False
+        )
         self.model_outfield.fit(X[X["FPL_pos"] != "GK"][self.features_outfield], y[y["FPL_pos"] != "GK"][self.to_predict],
         # eval_set=[(X_valid[X_valid["FPL_pos"] != "GK"][self.features_outfield], y_valid[y_valid["FPL_pos"] != "GK"][self.to_predict])],
-        verbose=False)
+        # verbose=False
+        )
         
     def predict(self, X):
         X_preds = X.copy()
@@ -55,7 +66,7 @@ class PositionalModel:
 
             model_pred = np.array(self.model_GK.predict_old(X))
             overall_pred = np.array([row["Avg_FPL_points"] for i, row in X.iterrows()])
-            form_pred = np.array([row["FPL_points_5"] for i, row in X.iterrows()])
+            form_pred = np.array([row["FPL_points_4"] for i, row in X.iterrows()])
 
             return np.add( model_pred * XGB_COMPONENT, overall_pred * OVERALL_COMPONENT, form_pred * FORM_COMPONENT )
     
@@ -66,7 +77,7 @@ class PositionalModel:
 
             model_pred = np.array(self.model_outfield.predict_old(X))
             overall_pred = np.array([row["Avg_FPL_points"] for i, row in X.iterrows()])
-            form_pred = np.array([row["FPL_points_5"] for i, row in X.iterrows()])
+            form_pred = np.array([row["FPL_points_4"] for i, row in X.iterrows()])
 
             return np.add( model_pred * XGB_COMPONENT, overall_pred * OVERALL_COMPONENT, form_pred * FORM_COMPONENT )
     
