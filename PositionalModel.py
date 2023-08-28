@@ -4,9 +4,10 @@ from catboost import CatBoostRegressor
 import numpy as np
 
 class PositionalModel:
-    def __init__(self, features_GK, features_outfield, to_predict, model_GK=None, model_outfield=None, ):
+    def __init__(self, features_GK, features_outfield, cat_features, to_predict, model_GK=None, model_outfield=None,):
         self.features_GK = features_GK
         self.features_outfield = features_outfield
+        self.cat_features = cat_features
         self.to_predict = to_predict
         
         if model_GK:
@@ -29,7 +30,9 @@ class PositionalModel:
                 iterations = 1000,
                 early_stopping_rounds = 10,
                 learning_rate = 0.1,
-                verbose = False
+                verbose = False,
+                loss_function='RMSE',
+                cat_features = self.cat_features
                 # verbosity = 0,
                 # n_estimators=500,
                 # early_stopping_rounds=5,
@@ -41,11 +44,11 @@ class PositionalModel:
         
     def fit(self, X, y, X_valid, y_valid):
         # print(y[y["FPL_pos"] == "GK"].shape)
-        self.model_GK.fit(X[X["FPL_pos"] == "GK"][self.features_GK], y[y["FPL_pos"] == "GK"][self.to_predict],
+        self.model_GK.fit(X[X["FPL_pos"] == "GK"][self.features_GK + self.cat_features], y[y["FPL_pos"] == "GK"][self.to_predict],
         # eval_set=[(X_valid[X_valid["FPL_pos"] == "GK"][self.features_GK], y_valid[y_valid["FPL_pos"] == "GK"][self.to_predict])],
         # verbose=False
         )
-        self.model_outfield.fit(X[X["FPL_pos"] != "GK"][self.features_outfield], y[y["FPL_pos"] != "GK"][self.to_predict],
+        self.model_outfield.fit(X[X["FPL_pos"] != "GK"][self.features_outfield + self.cat_features], y[y["FPL_pos"] != "GK"][self.to_predict],
         # eval_set=[(X_valid[X_valid["FPL_pos"] != "GK"][self.features_outfield], y_valid[y_valid["FPL_pos"] != "GK"][self.to_predict])],
         # verbose=False
         )
