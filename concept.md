@@ -97,3 +97,5 @@ To do:
 - average value of prediction in evaluation
 - try catboost
 - xgb custom loss function - weighted MSE?
+- save features to file
+- model more things directly
