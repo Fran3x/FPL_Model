@@ -31,8 +31,10 @@ class PositionalModel:
                 early_stopping_rounds = 10,
                 learning_rate = 0.1,
                 verbose = False,
-                loss_function='RMSE',
-                cat_features = self.cat_features
+                cat_features = self.cat_features,
+                min_data_in_leaf = 2,
+                depth = 10,
+                l2_leaf_reg = 5,
                 # verbosity = 0,
                 # n_estimators=500,
                 # early_stopping_rounds=5,
@@ -44,7 +46,7 @@ class PositionalModel:
         
     def fit(self, X, y, X_valid, y_valid):
         # print(y[y["FPL_pos"] == "GK"].shape)
-        self.model_GK.fit(X[X["FPL_pos"] == "GK"][self.features_GK + self.cat_features], y[y["FPL_pos"] == "GK"][self.to_predict],
+        self.model_GK.fit(X[X["FPL_pos"] == "GK"][self.features_GK], y[y["FPL_pos"] == "GK"][self.to_predict],
         # eval_set=[(X_valid[X_valid["FPL_pos"] == "GK"][self.features_GK], y_valid[y_valid["FPL_pos"] == "GK"][self.to_predict])],
         # verbose=False
         )
@@ -59,7 +61,7 @@ class PositionalModel:
         if X_preds[X_preds["FPL_pos"] == "GK"].size > 0:
             X_preds.loc[X_preds["FPL_pos"] == "GK", "Pred"] =  self.model_GK.predict( X_preds[X_preds["FPL_pos"] == "GK"][self.features_GK] )
         if X_preds[X_preds["FPL_pos"] != "GK"].size > 0:
-            X_preds.loc[X_preds["FPL_pos"] != "GK", "Pred"] =  self.model_outfield.predict( X_preds[X_preds["FPL_pos"] != "GK"][self.features_outfield] )
+            X_preds.loc[X_preds["FPL_pos"] != "GK", "Pred"] =  self.model_outfield.predict( X_preds[X_preds["FPL_pos"] != "GK"][self.features_outfield + self.cat_features] )
         return X_preds["Pred"].to_list()
     
     def custom_predict_GK(self, X):

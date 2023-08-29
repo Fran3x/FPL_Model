@@ -66,9 +66,9 @@ class PositionalModelXGB:
             return np.add( model_pred * XGB_COMPONENT, overall_pred * OVERALL_COMPONENT, form_pred * FORM_COMPONENT )
     
     def custom_predict_outfield(self, X):
-            XGB_COMPONENT = 0.40
+            XGB_COMPONENT = 0.39
             OVERALL_COMPONENT = 0.45
-            FORM_COMPONENT = 0.2
+            FORM_COMPONENT = 0.16
 
             model_pred = np.array(self.model_outfield.predict_old(X))
             overall_pred = np.array([row["Avg_FPL_points"] for i, row in X.iterrows()])
