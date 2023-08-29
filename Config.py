@@ -30,6 +30,44 @@ current_teams = [
         'Wolves'
     ]
 
+current_teams_fpl = [
+        'Arsenal',
+        'Aston Villa',
+        'Bournemouth',
+        'Brentford',
+        'Brighton',
+        'Burnley',
+        'Chelsea',
+        'Crystal Palace',
+        'Everton',
+        'Fulham',
+        'Liverpool',
+        'Luton',
+        'Man City',
+        'Man Utd',
+        'Newcastle',
+        "Nott'm Forest",
+        'Sheffield Utd',
+        'Spurs',
+        'West Ham',
+        'Wolves'
+    ]
+
+def current_teams_to_fpl(team):
+    if team == "Manchester City":
+        return 'Man City'
+    if team == "Manchester Utd":
+        return 'Man Utd'
+    if team == "Newcastle Utd":
+        return 'Newcastle'
+    if team == "Nott'ham Forest":
+        return "Nott'm Forest"
+    if team == "Sheffield United":
+        return 'Sheffield Utd'
+    if team == "Tottenham":
+        return 'Spurs'
+    return team
+
 # features
 FEATURES_OUTFIELD = ['Was_home',
  'Rating_difference',

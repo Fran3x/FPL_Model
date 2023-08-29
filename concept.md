@@ -53,6 +53,7 @@ Predictions file order:
 - team_elo_rating.ipynb (to get newest elo ratings)
 - active_players.ipynb (to track injuries)
 - get_goalkeepers.ipynb (to get first choice goalkeepers)
+- gk_last_season.ipynb (to adjusting GKs with low number of games played)
 - df_features_for_next_season.ipynb (for next_season.ipynb)
 - next_season.ipynb (~7 mins, generates DF for all logs in current/upcoming season)
 - pred_next_season.ipynb (generates DF with predictions with 0 predicted for every injured player)
@@ -99,3 +100,6 @@ To do:
 - xgb custom loss function - weighted MSE?
 - save features to file
 - model more things directly
+- target encoding for position
+
+- linear model:
