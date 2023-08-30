@@ -95,10 +95,9 @@ To do:
 - dynamically save features to file
 - use web name
 - average value of prediction in evaluation
-- try catboost
 - xgb custom loss function - weighted MSE?
 - save features to file
 - model more things directly
 - target encoding for position
-
-- linear model:
+- next_season.ipynb output is actually lagged by 1 gameweek
+- linear model
