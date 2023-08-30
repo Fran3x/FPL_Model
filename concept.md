@@ -29,6 +29,7 @@ Other ideas:
 
 
 Data updating order:
+- get_players.ipynb (to scrape current players for every team from fbref)
 - run global_scraper.py (~6 mins)
 - run global_merger.py
 - move master_team_list.csv from /vaastav to /data (only at the start of new season)
