@@ -11,7 +11,6 @@ Lineup evaluation model:
   2. number of players from one club, e.g. 3xCity
   3. strength of the bench
   4. expected minutes of players
-- own metric focusing on correct order (Haaland > Salah)
 
 
 Player evaluation model:
@@ -70,7 +69,6 @@ To do:
 - fill dataset with 0 min matches
 - how many days from last match
 - plottable folders
-- EDA
 - plottable color bug
 - add descriptions on page
 - form component (weighted by days that past)
