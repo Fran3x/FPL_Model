@@ -99,7 +99,7 @@ names = {
     'Aleksandar Mitrovic': 'Aleksandar Mitrović',
     'Erling Haaland': 'Erling Håland',
     'Jefferson Lerma': 'Jefferson Lerma Solís',
-    'Taiwo Awoniyi': '',
+    'Taiwo Awoniyi': 'Taiwo Awoniyi',
     'Darwin Núñez': 'Darwin Núñez',
     'Ivan Perisic': 'Ivan Perišić'
 }
