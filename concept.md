@@ -11,7 +11,6 @@ Lineup evaluation model:
   2. number of players from one club, e.g. 3xCity
   3. strength of the bench
   4. expected minutes of players
-- own metric focusing on correct order (Haaland > Salah)
 
 
 Player evaluation model:
@@ -29,6 +28,7 @@ Other ideas:
 
 
 Data updating order:
+- get_players.ipynb (to scrape current players for every team from fbref)
 - run global_scraper.py (~6 mins)
 - run global_merger.py
 - move master_team_list.csv from /vaastav to /data (only at the start of new season)
@@ -69,7 +69,6 @@ To do:
 - fill dataset with 0 min matches
 - how many days from last match
 - plottable folders
-- EDA
 - plottable color bug
 - add descriptions on page
 - form component (weighted by days that past)
@@ -96,10 +95,9 @@ To do:
 - dynamically save features to file
 - use web name
 - average value of prediction in evaluation
-- try catboost
 - xgb custom loss function - weighted MSE?
 - save features to file
 - model more things directly
 - target encoding for position
-
-- linear model:
+- next_season.ipynb output is actually lagged by 1 gameweek
+- linear model
