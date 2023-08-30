@@ -1,0 +1,3 @@
+goals,shots,xG,time,position,h_team,a_team,h_goals,a_goals,date,id,season,roster_id,xA,assists,key_passes,npg,npxG,xGChain,xGBuildup
+0,2,0.04963738098740578,84,FW,Burnley,Aston Villa,1,3,2023-08-27,22302,2023,607447,0,0,0,0,0.04963738098740578,0.04963738098740578,0
+0,1,0.06125757470726967,66,FW,Burnley,Manchester City,0,3,2023-08-11,22275,2023,603613,0,0,0,0,0.06125757470726967,0.21692879498004913,0.15567122399806976

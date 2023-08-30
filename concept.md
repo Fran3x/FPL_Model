@@ -14,35 +14,6 @@ Lineup evaluation model:
 - own metric focusing on correct order (Haaland > Salah)
 
 
-Features:
-- Related to goal appetite:
-    - 'goals_avg5'
-    - 'xG_avg5'
-    - 'shots_avg5'
-
-- Related to creativity:
-    - 'assists_fpl_avg5'
-    
-- Related to defensive capabilities:
-    - 'clean_sheets_avg5'
-    - 'goals_conceded_avg5'
-
-- Related to general performance:
-    - 'bonus_avg5', 
-    - 'bps_avg5', 
-
-- Related to team offensive form:
-    - 'xGBuildup_avg5'
-    - 'xGChain_avg5'
-    
-- Related to cards:
-    - 'yellow_cards_avg5',
-    - 'red_cards_avg5'
-    
-- Other:
-    - 'was_home'
-
-
 Player evaluation model:
 - expected points,
 - ownership,
@@ -67,8 +38,6 @@ Data updating order:
 - team_elo_rating.ipynb (to get newest elo ratings)
 - assign_team_to_previous.ipynb (~9 mins)
 - dataset_cleaning.csv (renaming columns etc.)
-- LSTM_test.ipynb
-- XGBoost_predictions.ipynb
 
 
 File order:
@@ -84,6 +53,7 @@ Predictions file order:
 - team_elo_rating.ipynb (to get newest elo ratings)
 - active_players.ipynb (to track injuries)
 - get_goalkeepers.ipynb (to get first choice goalkeepers)
+- gk_last_season.ipynb (to adjusting GKs with low number of games played)
 - df_features_for_next_season.ipynb (for next_season.ipynb)
 - next_season.ipynb (~7 mins, generates DF for all logs in current/upcoming season)
 - pred_next_season.ipynb (generates DF with predictions with 0 predicted for every injured player)
@@ -92,10 +62,8 @@ Predictions file order:
 
 To do:
 - extending data to previous seasons
-- adjust xP for bonus
 - force model to learn xP - avg Points
 - try linear model
-- price, transfers out/in as predictors
 - compare old and new dataset and model
 - streamlit - stats tab
 - fill dataset with 0 min matches
@@ -118,7 +86,6 @@ To do:
 - separate model for players with less than 10 caps registered
 - investigate missing rows
 - pairwise called in a wrong order
-- optimize predict for positional model 
 - solve performance issues - iterrows, apply 
 - plots frontend
 - 45 missing rows in nextseason
@@ -127,6 +94,12 @@ To do:
 - information about when was data updated for the last time
 - form xP and xP_avg_points
 - dynamically save features to file
-- PositionalModel uses same features for GK and outfield
-- price = 4.5 or 45
 - use web name
+- average value of prediction in evaluation
+- try catboost
+- xgb custom loss function - weighted MSE?
+- save features to file
+- model more things directly
+- target encoding for position
+
+- linear model:

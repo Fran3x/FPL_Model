@@ -1,16 +1,22 @@
 from xgboost import XGBRegressor
+from sklearn.ensemble import GradientBoostingRegressor
+from catboost import CatBoostRegressor
 import numpy as np
 
 class PositionalModel:
-    def __init__(self, features, to_predict, model_GK=None, model_outfield=None):
-        self.features = features
+    def __init__(self, features_GK, features_outfield, cat_features, to_predict, model_GK=None, model_outfield=None,):
+        self.features_GK = features_GK
+        self.features_outfield = features_outfield
+        self.cat_features = cat_features
         self.to_predict = to_predict
         
         if model_GK:
             self.model_GK = model_GK
         else:
-            self.model_GK = XGBRegressor(
-                random_state=42, verbosity = 0,
+            self.model_GK = CatBoostRegressor(
+                random_state=42, 
+                verbose = False
+                # verbosity = 0,
                 # n_estimators=500,
                 # early_stopping_rounds=5,
                 # learning_rate=0.2
@@ -19,8 +25,17 @@ class PositionalModel:
         if model_outfield:
             self.model_outfield = model_outfield
         else:
-            self.model_outfield = XGBRegressor(
-                random_state=42, verbosity = 0,
+            self.model_outfield = CatBoostRegressor(
+                random_state=42, 
+                iterations = 1000,
+                early_stopping_rounds = 10,
+                learning_rate = 0.1,
+                verbose = False,
+                cat_features = self.cat_features,
+                min_data_in_leaf = 2,
+                depth = 10,
+                l2_leaf_reg = 5,
+                # verbosity = 0,
                 # n_estimators=500,
                 # early_stopping_rounds=5,
                 # learning_rate=0.2
@@ -31,25 +46,23 @@ class PositionalModel:
         
     def fit(self, X, y, X_valid, y_valid):
         # print(y[y["FPL_pos"] == "GK"].shape)
-        self.model_GK.fit(X[X["FPL_pos"] == "GK"][self.features], y[y["FPL_pos"] == "GK"][self.to_predict],
-        # eval_set=[(X_valid[X_valid["FPL_pos"] == "GK"][self.features], y_valid[y_valid["FPL_pos"] == "GK"][self.to_predict])],
-        verbose=False)
-        self.model_outfield.fit(X[X["FPL_pos"] != "GK"][self.features], y[y["FPL_pos"] != "GK"][self.to_predict],
-        # eval_set=[(X_valid[X_valid["FPL_pos"] != "GK"][self.features], y_valid[y_valid["FPL_pos"] != "GK"][self.to_predict])],
-        verbose=False)
+        self.model_GK.fit(X[X["FPL_pos"] == "GK"][self.features_GK], y[y["FPL_pos"] == "GK"][self.to_predict],
+        # eval_set=[(X_valid[X_valid["FPL_pos"] == "GK"][self.features_GK], y_valid[y_valid["FPL_pos"] == "GK"][self.to_predict])],
+        # verbose=False
+        )
+        self.model_outfield.fit(X[X["FPL_pos"] != "GK"][self.features_outfield + self.cat_features], y[y["FPL_pos"] != "GK"][self.to_predict],
+        # eval_set=[(X_valid[X_valid["FPL_pos"] != "GK"][self.features_outfield], y_valid[y_valid["FPL_pos"] != "GK"][self.to_predict])],
+        # verbose=False
+        )
         
     def predict(self, X):
-        output = []
-        i = 0
-        for ind, row in X.iterrows():
-            # print(i)
-            if row["FPL_pos"] == "GK":
-                output.append( self.model_GK.predict( X.head(i+1).tail(1)[self.features] ) )
-            if row["FPL_pos"] != "GK":
-                # print(row[features])
-                output.append( self.model_outfield.predict( X.head(i+1).tail(1)[self.features] ) )
-            i += 1
-        return np.array(output).flatten()
+        X_preds = X.copy()
+        # print(X_preds[X_preds["FPL_pos"] == "GK"].shape, X_preds[X_preds["FPL_pos"] == "GK"][self.features_GK].shape, self.model_GK.predict( X_preds[X_preds["FPL_pos"] == "GK"][self.features_GK] ).shape)
+        if X_preds[X_preds["FPL_pos"] == "GK"].size > 0:
+            X_preds.loc[X_preds["FPL_pos"] == "GK", "Pred"] =  self.model_GK.predict( X_preds[X_preds["FPL_pos"] == "GK"][self.features_GK] )
+        if X_preds[X_preds["FPL_pos"] != "GK"].size > 0:
+            X_preds.loc[X_preds["FPL_pos"] != "GK", "Pred"] =  self.model_outfield.predict( X_preds[X_preds["FPL_pos"] != "GK"][self.features_outfield + self.cat_features] )
+        return X_preds["Pred"].to_list()
     
     def custom_predict_GK(self, X):
             XGB_COMPONENT = 0.3
