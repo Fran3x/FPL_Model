@@ -100,4 +100,5 @@ To do:
 - model more things directly
 - target encoding for position
 - next_season.ipynb output is actually lagged by 1 gameweek
-- linear model
+- metric only for selected by more than p%
+- linear for every position
