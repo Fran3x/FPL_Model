@@ -287,4 +287,14 @@ def team_understat_to_fpl(team_name):
         return "Manchester Utd"
     if team_name == "Nottingham Forest":
         return "Nott'ham Forest"
+    if team_name == "Sheffield United":
+        return "Sheffield Utd"
+    if team_name == "Luton":
+        return "Luton Town"
+    if team_name == "Norwich":
+        return "Norwich City"
+    if team_name == "Leicester":
+        return "Leicester City"
+    if team_name == "Leeds":
+        return "Leeds United"
     return team_name
