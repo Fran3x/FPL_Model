@@ -28,7 +28,7 @@ Other ideas:
 
 
 Data updating order:
-- get_players.ipynb (to scrape current players for every team from fbref)
+- get_players.ipynb (~2 mins, to scrape current players for every team from fbref)
 - run global_scraper.py (~6 mins)
 - run global_merger.py
 - move master_team_list.csv from /vaastav to /data (only at the start of new season)
@@ -71,11 +71,8 @@ To do:
 - plottable folders
 - plottable color bug
 - add descriptions on page
-- form component (weighted by days that past)
-- add bench to best eleven
 - divider line above Summary
 - store functions outside of notebooks
-- MAE@N
 - xP underestimated
 - evaluation as DataFrame
 - preds for more than 1 gameweek
