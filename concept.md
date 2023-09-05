@@ -28,6 +28,7 @@ Other ideas:
 
 
 Data updating order:
+- completed.fixtures.ipynb (to get xG for teams involved)
 - get_players.ipynb (~2 mins, to scrape current players for every team from fbref)
 - run global_scraper.py (~6 mins)
 - run global_merger.py
