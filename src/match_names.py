@@ -1,5 +1,5 @@
 def neutralize_name(name):
-    return name.replace(" ", "-").replace("ï", "i").replace("é", "e").replace("á", "a").replace("ó", "o").replace("Á", "A").replace("ø", "o").replace("ć", "c").replace("í", "i").replace("ú", "u").replace("Ć", "C").replace("ã", "a").replace("ğ", "g").replace("ş", "s").replace("É", "E").replace("ñ", "n").replace("Ł", "L").replace("ń", "n").replace("ß", "ss").replace("ç", "c").replace("İ", "I").replace("č", "c").replace("ö", "o").replace("ë", "e").replace("š", "s").replace("ä", "a").replace("Ç", "C").replace("ü", "u").replace("Ø", "O").replace("ú", "u").replace("ú", "u").replace("è", "e").replace("ê", "e").replace("î", "i").replace("ð", "d").replace("Š", "S").replace("ò", "o")
+    return name.replace(" ", "-").replace("ï", "i").replace("é", "e").replace("á", "a").replace("ó", "o").replace("Á", "A").replace("ø", "o").replace("ć", "c").replace("í", "i").replace("ú", "u").replace("Ć", "C").replace("ã", "a").replace("ğ", "g").replace("ş", "s").replace("É", "E").replace("ñ", "n").replace("Ł", "L").replace("ń", "n").replace("ß", "ss").replace("ç", "c").replace("İ", "I").replace("č", "c").replace("ö", "o").replace("ë", "e").replace("š", "s").replace("ä", "a").replace("Ç", "C").replace("ü", "u").replace("Ø", "O").replace("ú", "u").replace("ú", "u").replace("è", "e").replace("ê", "e").replace("î", "i").replace("ð", "d").replace("Š", "S").replace("ò", "o").replace("đ", "d")
 
 
 names = {
@@ -287,4 +287,14 @@ def team_understat_to_fpl(team_name):
         return "Manchester Utd"
     if team_name == "Nottingham Forest":
         return "Nott'ham Forest"
+    if team_name == "Sheffield United":
+        return "Sheffield Utd"
+    if team_name == "Luton":
+        return "Luton Town"
+    if team_name == "Norwich":
+        return "Norwich City"
+    if team_name == "Leicester":
+        return "Leicester City"
+    if team_name == "Leeds":
+        return "Leeds United"
     return team_name
