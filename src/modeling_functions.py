@@ -149,3 +149,20 @@ def evaluate(model, df, predictions, y_true, to_predict="FPL_points", features=[
     print("Pairwise accuracy:", pairwise_acc)
     print("Pairwise accuracy @TOP100:", pairwise_accuracy_top100)
     print("Pairwise accuracy @TOP20:", pairwise_accuracy_top20)
+
+
+def adjust_goalkeepers(df, df_upcoming):
+    treshold = 30
+    gk_last_season = pd.read_csv('data/misc/gk_last_season.csv')
+    for gk in df_upcoming[df_upcoming["FPL_pos"] == "GK"]["Name_original"].unique():
+        gk_games = df[df["Name_original"] == gk].shape[0]
+        if gk_games < treshold:
+            current_avg = df_upcoming[df_upcoming["Name_original"] == gk].tail(1)["Avg_FPL_points"].item()
+            gk_team = df_upcoming[df_upcoming["Name_original"] == gk].tail(1)["Team"].item()
+            if gk_last_season[gk_last_season["team"] == current_teams_to_fpl(gk_team)].shape[0] > 0:
+                last_season_avg = gk_last_season[gk_last_season["team"] == current_teams_to_fpl(gk_team)]["total_points"].item()
+            else:
+                last_season_avg = 3.2 # default for newly-promoted teams
+            df_upcoming.loc[df_upcoming["Name_original"] == gk, "Avg_FPL_points"] = ( current_avg * gk_games + last_season_avg * (30 - gk_games) ) / 30
+            # print(gk, gk_games, gk_team, current_avg, last_season_avg, current_avg * gk_games)
+    return df_upcoming

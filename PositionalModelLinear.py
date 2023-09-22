@@ -3,6 +3,8 @@ from sklearn.ensemble import GradientBoostingRegressor
 from catboost import CatBoostRegressor
 import numpy as np
 from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Ridge
+from sklearn.linear_model import Lasso
 
 class PositionalModelLinear:
     def __init__(self, features_GK, features_outfield, cat_features, to_predict, model_GK=None, model_outfield=None,):
@@ -27,7 +29,7 @@ class PositionalModelLinear:
         if model_outfield:
             self.model_outfield = model_outfield
         else:
-            self.model_outfield = LinearRegression()
+            self.model_outfield = Ridge()
         
         
     def fit(self, X, y):
